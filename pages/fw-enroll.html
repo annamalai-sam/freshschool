@@ -52,7 +52,7 @@
                         </td>
                         <td>
                             <input type="text" id="firstname"
-                                placeholder="Enter Firstname" >
+                                placeholder="Enter Firstname" required >
                         </td>
                     </tr>
                     <tr>
@@ -60,7 +60,7 @@
                             <label>Last Name: </label>
                         </td>
                         <td>
-                            <input type="text" id="lastname"
+                            <input required type="text" id="lastname"
                                 placeholder="Enter Lastname" >
                         </td>
                     </tr> 
@@ -69,7 +69,7 @@
                                 <label>Email: </label>
                             </td>
                             <td>
-                                <input type="email"
+                                <input required type="email"
                                     placeholder="Enter Email Address"
                                     id="email" >
                             </td>
@@ -79,7 +79,7 @@
                                 <label>Phone Number:</label>
                             </td>
                             <td>
-                                <input type="tel" id="stu_num"
+                                <input required type="tel" id="stu_num"
                                     pattern="[0-9]{10}"
                                     placeholder="Mobile number" >
                             </td>
@@ -89,7 +89,7 @@
                                 <label>DOB:</label>
                             </td>
                             <td>
-                                <input type="date" min="2001-01-01" id="dob"
+                                <input required type="date" min="2001-01-01" id="dob"
                                     max="2004-12-31" placeholder="Enter DOB"
                                     >
                             </td>
@@ -99,7 +99,7 @@
                                 <label>HSC Certificate(Digital):</label>
                             </td>
                             <td>
-                                <input type="file" id="document"
+                                <input required type="file" id="document"
                                     accept=".doc,.docx,application/msword,image/png,
                                     image/jpeg,image/jpg"
                                     >
@@ -115,7 +115,7 @@
                                 <label>Name:</label>
                             </td>
                             <td>
-                                <input type="text" id="par_name"
+                                <input required type="text" id="par_name"
                                     placeholder="Parent/Gaurdian's Name"
                                     >
                             </td>
@@ -125,7 +125,7 @@
                                 <label>Email: </label>
                             </td>
                             <td>
-                                <input type="email"
+                                <input required type="email"
                                     placeholder="Enter Email Address"
                                     id="par_email" >
                             </td>
@@ -135,7 +135,7 @@
                                 <label>Phone Number:</label>
                             </td>
                             <td>
-                                <input type="tel" pattern="[0-9]{10}"
+                                <input required type="tel" pattern="[0-9]{10}"
                                     id="par_num" placeholder="Enter Ph number"
                                     >
                             </td>
@@ -149,14 +149,14 @@
                                 <label>Address</label>
                             </td>
                             <td>
-                                <textarea placeholder="Enter Address here"
+                                <textarea required placeholder="Enter Address here"
                                     id="address" rows="6" cols="40" ></textarea>
                             </td>
                         </tr>
                     </table>
                 </div>
                 <div class="enroll_box4">
-                    <input type="checkbox" style="width: 20px; height:
+                    <input required type="checkbox" style="width: 20px; height:
                         20px;"
                         required>
                     <label>Agree to terms and conditions.<a
@@ -165,7 +165,7 @@
                 <input type="submit" class="enrolbtn" style="margin-left:
                     45%;
                     margin-top:20px;">
-                <input type="reset" value="Cancel" class="enrolbtn"
+                <input required type="reset" value="Cancel" class="enrolbtn"
                     style="margin-left:
                     45%;
                     margin-top:20px;">
