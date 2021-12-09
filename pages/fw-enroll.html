@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css"
+            href="../assets/css/fwschool.css">
+        <title>FreshSchool Enroll</title>
+        <style>
+    td{
+        text-align: center;
+        padding: 10px;
+    }
+    input{
+        height: 40px; 
+        width: 300px;
+        opacity: 80%; 
+        border-radius: 10px; 
+        border: none;
+    }
+    textarea{
+        border: none; 
+        border-radius: 20px;
+        opacity: 80%; 
+        padding: 10px;
+    }
+    .enrolbtn {
+        height: 50px; 
+        width: 120px;
+        background-color: black; 
+        color: white; 
+        opacity: 70%;
+        font-size: large; 
+        border-radius: 20px;
+        border: none;    
+    }
+    .enrolbtn:hover {
+        cursor: pointer;
+    }
+    .frm_head{
+        text-align: center; font-size: 80px;
+    }
+ </style>
+ <script src="../assets/js/form.js"></script>
+    </head>
+    <body>
+        <h2 class="frm_head"> Admission Form <br> For FWSA! </h2>
+        <h1 style="margin-top: 100px; margin-left: 40%;">Student Information</h1>
+        <div class="enroll_box1" style="color: white;">
+            <form onsubmit="newfrm()">
+                <table>
+                    <tr>
+                        <td>
+                            <label>First Name: </label>
+                        </td>
+                        <td>
+                            <input type="text" id="firstname"
+                                placeholder="Enter Firstname" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Last Name: </label>
+                        </td>
+                        <td>
+                            <input type="text" id="lastname"
+                                placeholder="Enter Lastname" required>
+                        </td>
+                    </tr> 
+                        <tr>
+                            <td>
+                                <label>Email: </label>
+                            </td>
+                            <td>
+                                <input type="email"
+                                    placeholder="Enter Email Address"
+                                    id="email" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Phone Number:</label>
+                            </td>
+                            <td>
+                                <input type="tel" id="stu_num"
+                                    pattern="[0-9]{10}"
+                                    placeholder="Mobile number" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>DOB:</label>
+                            </td>
+                            <td>
+                                <input type="date" min="2001-01-01" id="dob"
+                                    max="2004-12-31" placeholder="Enter DOB"
+                                    required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>HSC Certificate(Digital):</label>
+                            </td>
+                            <td>
+                                <input type="file" id="document"
+                                    accept=".doc,.docx,application/msword,image/png,
+                                    image/jpeg,image/jpg"
+                                    required>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <h1 style="margin-left: 35%;">Parent/Gaurdian Information</h1>
+                <div class="enroll_box2" style="color: white;">
+                    <table>
+                        <tr>
+                            <td>
+                                <label>Name:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="par_name"
+                                    placeholder="Parent/Gaurdian's Name"
+                                    required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Email: </label>
+                            </td>
+                            <td>
+                                <input type="email"
+                                    placeholder="Enter Email Address"
+                                    id="par_email" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Phone Number:</label>
+                            </td>
+                            <td>
+                                <input type="tel" pattern="[0-9]{10}"
+                                    id="par_num" placeholder="Enter Ph number"
+                                    required>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="enroll_box3">
+                    <table>
+                        <tr>
+                            <td>
+                                <label>Address</label>
+                            </td>
+                            <td>
+                                <textarea placeholder="Enter Address here"
+                                    id="address" rows="6" cols="40" required></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="enroll_box4">
+                    <input type="checkbox" style="width: 20px; height:
+                        20px;"
+                        required>
+                    <label>Agree to terms and conditions.<a
+                            href="./terms.html">Read more</a></label>
+                </div>
+                <input type="submit" class="enrolbtn" style="margin-left:
+                    45%;
+                    margin-top:20px;">
+                <input type="reset" value="Cancel" class="enrolbtn"
+                    style="margin-left:
+                    45%;
+                    margin-top:20px;">
+            </form>
+        </div>
+    </body>
+</html>

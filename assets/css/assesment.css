@@ -1,0 +1,52 @@
+body {
+  background-image: url('../images/violet3.jpeg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 100%;
+}
+
+table, th, td {
+  border: 3 collapse black;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 15px 0px 30px;
+  color: black;
+  background-color: honeydew;
+}
+
+table {
+  text-align: center;
+  font-size: 30px;
+  border-collapse: collapse;
+  width: 60%;
+  height: 1%
+}
+
+th, td {
+  width: 150px;
+  height: 20PX;
+}
+
+tr:hover {
+  background-color: darkgray;
+  cursor: pointer;
+}
+
+h1 {
+  color: honeydew;
+  font-size: 50px;
+  padding: 30px;
+}
+
+th {
+  width: 150px;
+  height: 100px;
+  background-color: honeydew
+}
+
+td {
+  background-color: honeydew;
+  width: 200px;
+  height: 20px;
+  padding: 10px
+}
