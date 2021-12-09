@@ -39,13 +39,12 @@
         text-align: center; font-size: 80px;
     }
  </style>
- <script src="../assets/js/form.js"></script>
     </head>
     <body>
         <h2 class="frm_head"> Admission Form <br> For FWSA! </h2>
         <h1 style="margin-top: 100px; margin-left: 40%;">Student Information</h1>
         <div class="enroll_box1" style="color: white;">
-            <form onsubmit="newfrm()">
+            <form onsubmit="loginAlert()">
                 <table>
                     <tr>
                         <td>
@@ -53,7 +52,7 @@
                         </td>
                         <td>
                             <input type="text" id="firstname"
-                                placeholder="Enter Firstname" required>
+                                placeholder="Enter Firstname" >
                         </td>
                     </tr>
                     <tr>
@@ -62,7 +61,7 @@
                         </td>
                         <td>
                             <input type="text" id="lastname"
-                                placeholder="Enter Lastname" required>
+                                placeholder="Enter Lastname" >
                         </td>
                     </tr> 
                         <tr>
@@ -72,7 +71,7 @@
                             <td>
                                 <input type="email"
                                     placeholder="Enter Email Address"
-                                    id="email" required>
+                                    id="email" >
                             </td>
                         </tr>
                         <tr>
@@ -82,7 +81,7 @@
                             <td>
                                 <input type="tel" id="stu_num"
                                     pattern="[0-9]{10}"
-                                    placeholder="Mobile number" required>
+                                    placeholder="Mobile number" >
                             </td>
                         </tr>
                         <tr>
@@ -92,7 +91,7 @@
                             <td>
                                 <input type="date" min="2001-01-01" id="dob"
                                     max="2004-12-31" placeholder="Enter DOB"
-                                    required>
+                                    >
                             </td>
                         </tr>
                         <tr>
@@ -103,7 +102,7 @@
                                 <input type="file" id="document"
                                     accept=".doc,.docx,application/msword,image/png,
                                     image/jpeg,image/jpg"
-                                    required>
+                                    >
                             </td>
                         </tr>
                     </table>
@@ -118,7 +117,7 @@
                             <td>
                                 <input type="text" id="par_name"
                                     placeholder="Parent/Gaurdian's Name"
-                                    required>
+                                    >
                             </td>
                         </tr>
                         <tr>
@@ -128,7 +127,7 @@
                             <td>
                                 <input type="email"
                                     placeholder="Enter Email Address"
-                                    id="par_email" required>
+                                    id="par_email" >
                             </td>
                         </tr>
                         <tr>
@@ -138,7 +137,7 @@
                             <td>
                                 <input type="tel" pattern="[0-9]{10}"
                                     id="par_num" placeholder="Enter Ph number"
-                                    required>
+                                    >
                             </td>
                         </tr>
                     </table>
@@ -151,7 +150,7 @@
                             </td>
                             <td>
                                 <textarea placeholder="Enter Address here"
-                                    id="address" rows="6" cols="40" required></textarea>
+                                    id="address" rows="6" cols="40" ></textarea>
                             </td>
                         </tr>
                     </table>
@@ -172,5 +171,6 @@
                     margin-top:20px;">
             </form>
         </div>
+        <script src="../assets/js/main.js"></script>
     </body>
 </html>

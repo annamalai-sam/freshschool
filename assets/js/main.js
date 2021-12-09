@@ -1,4 +1,5 @@
 let allfrm = [];
+
 function pre_data() {
   let application = JSON.parse(localStorage.getItem("All_form"));
   if (application == null) {
@@ -8,7 +9,8 @@ function pre_data() {
   }
 }
 pre_data();
-function newfrm() {
+
+function loginAlert() {
   event.preventDefault();
   let firstname = document.getElementById("firstname").value;
   let lastname = document.getElementById("lastname").value;
@@ -20,21 +22,25 @@ function newfrm() {
   let par_email = document.getElementById("par_email").value;
   let par_num = document.getElementById("par_num").value;
   let address = document.getElementById("address").value;
+
   const isEmailAlreadyExist = emailValid(email);
+
+  console.log(isEmailAlreadyExist);
+
   if (isEmailAlreadyExist) {
     alert("Email already exist");
   } else {
-    let form = {
-      First_Name: firstname,
-      Last_name: lastname,
-      Email: email,
-      Stu_num: stu_num,
-      DOB: dob,
-      Documnt: documnt,
-      Par_name: par_name,
-      Par_email: par_email,
-      Par_num: par_num,
-      address: address,
+        let form = {
+     "First_Name": firstname,
+      "Last_name": lastname,
+      "Email": email,
+      "Stu_num": stu_num,
+      "DOB": dob,
+      "Documnt": documnt,
+      "Par_name": par_name,
+      "Par_email": par_email,
+      "Par_num": par_num,
+      "address": address,
     };
     allfrm.push(form);
     console.log(allfrm);
@@ -43,10 +49,13 @@ function newfrm() {
 }
 function emailValid(current_email) {
   let isUsed = false;
+
+  console.log(allfrm);
+
   for (i = 0; i < allfrm.length; i++) {
     const user = allfrm[i];
-    const email = user.email;
-    if (current_email == email) {
+    const gmail = user.Email;
+    if (current_email == gmail) {
       isUsed = true;
       break;
     }
