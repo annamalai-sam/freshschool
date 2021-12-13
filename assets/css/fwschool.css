@@ -1,7 +1,4 @@
-* {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
-}
+*
 
 body {
     background-image: url("../images/fw-mainbg.jpg");
@@ -100,7 +97,6 @@ img {
     font-size: x-large;
     border-radius: 20px;
 }
-
 .enroll_box2 {
     margin-left: 30%;
     padding: 10px;
@@ -113,7 +109,6 @@ img {
     font-size: x-large;
     padding-left: 100px;
 }
-
 .enroll_box3 {
     margin-left: 30%;
     padding: 10px;
@@ -126,7 +121,6 @@ img {
     border-radius: 20px;
     font-size: x-large;
 }
-
 .enroll_box4 {
     margin-left: 42%;
     margin-top: 50px;
@@ -137,12 +131,10 @@ img {
     border: 3px solid black;
     border-radius: 10px;
 }
-
 #contact {
     background-color: transparent;
     color: black;
 }
-
 .batn {
     background-color: blue;
     height: 50px;
@@ -159,5 +151,4 @@ img {
 .batn:hover {
     background-color: white;
     color: black;
-
 }
