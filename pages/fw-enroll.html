@@ -1,49 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" type="text/css"
-            href="../assets/css/fwschool.css">
+        <link rel="stylesheet" type="text/css" href="../assets/css/enroll.css">
+        <link rel="shortcut icon" href="../assets/images/fwlogo.png "/>
         <title>FreshSchool Enroll</title>
-        <style>
-    td{
-        text-align: center;
-        padding: 10px;
-    }
-    input{
-        height: 40px; 
-        width: 300px;
-        opacity: 80%; 
-        border-radius: 10px; 
-        border: none;
-    }
-    textarea{
-        border: none; 
-        border-radius: 20px;
-        opacity: 80%; 
-        padding: 10px;
-    }
-    .enrolbtn {
-        height: 50px; 
-        width: 120px;
-        background-color: black; 
-        color: white; 
-        opacity: 70%;
-        font-size: large; 
-        border-radius: 20px;
-        border: none;    
-    }
-    .enrolbtn:hover {
-        cursor: pointer;
-    }
-    .frm_head{
-        text-align: center; font-size: 80px;
-    }
- </style>
     </head>
     <body>
         <h2 class="frm_head"> Admission Form <br> For FWSA! </h2>
-        <h1 style="margin-top: 100px; margin-left: 40%;">Student Information</h1>
-        <div class="enroll_box1" style="color: white;">
+        <h1 class="frm_tit">Student Information</h1>
+        <div class="enroll_box1">
             <form onsubmit="loginAlert()">
                 <table>
                     <tr>
@@ -101,14 +66,13 @@
                             <td>
                                 <input  type="file" id="document"
                                     accept=".doc,.docx,application/msword,image/png,
-                                    image/jpeg,image/jpg" required
-                                    >
+                                    image/jpeg,image/jpg" required >
                             </td>
                         </tr>
                     </table>
                 </div>
-                <h1 style="margin-left: 35%;">Parent/Gaurdian Information</h1>
-                <div class="enroll_box2" style="color: white;">
+                <h1 class="frm_tit">Parent/Gaurdian Information</h1>
+                <div class="enroll_box2">
                     <table>
                         <tr>
                             <td>
@@ -116,8 +80,7 @@
                             </td>
                             <td>
                                 <input  type="text" id="par_name" pattern="[a-zA-Z]{3,}"
-                                    placeholder="Parent/Gaurdian's Name" required
-                                    >
+                                    placeholder="Parent/Gaurdian's Name" required>
                             </td>
                         </tr>
                         <tr>
@@ -146,11 +109,11 @@
                     <table>
                         <tr>
                             <td>
-                                <label>Address</label>
+                                <label>Address :</label>
                             </td>
                             <td>
                                 <textarea  placeholder="Enter Address here"
-                                    id="address" rows="6" cols="40" required ></textarea>
+                                    id="address" rows="3" cols="90" required ></textarea>
                             </td>
                         </tr>
                     </table>

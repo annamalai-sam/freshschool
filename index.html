@@ -2,8 +2,8 @@
 <html>
   <head>
     <title>FreshSchool Home</title>
-    <link rel="stylesheet" type="text/css" href="./assets/css/fwschool.css" />
-    <link rel="shortcut icon" href="./assets/images/fwlogo.png"
+    <link rel="stylesheet" type="text/css" href="./assets/css/index.css"/>
+    <link rel="shortcut icon" href="./assets/images/fwlogo.png"/>
   </head>
   <body>
     <header>
@@ -12,7 +12,7 @@
           class="fwlogo"
           src="./assets/images/fwlogo.png"
           style="height: 43px"
-        />
+          />
         <label id="fwlogoname">FreshSchool</label>
         <ul align="center" style="color: #ffff">
           <li class="active"><a href="./index.html">Home</a></li>
@@ -33,15 +33,7 @@
     <h1 align="center">FreshSchool</h1>
     <p align="center">(A place where you can learn Real-Life Skills.)</p>
     <img
-      src="./assets/images/intropic.jpg"
-      style="
-        width: 90%;
-        height: 800px;
-        border-radius: 20px;
-        margin-left: 110px;
-        box-shadow: 10px 10px 20px;
-      "
-    />
+      src="./assets/images/intropic.jpg" class="intropic"/>
     <button
       type="button"
       onclick="window.location.href='./pages/fw-enroll.html';"
@@ -50,24 +42,25 @@
       Enroll Now
     </button>
 
-    <div style="margin-left: 20px">
-      <p style="font-size: x-large; text-align: center">
+    <div class="center">
+      <p style="font-size: x-large;">
         <b>We the freshschool</b> will improve your skills by arm yourself with
         knoweldge and tools needed to ace day-to-day work <br />
 
         and accelerate personal growth.we are exited to welcome our students to
         our beautiful campus.
       </p>
-      <h1
+      </div>
+      <!-- <h1
+        align="center"
         style="
           font-size: 60px;
           color: black;
           font-family: Arial, Helvetica, sans-serif;
-          margin-left: 40%;
         "
       >
         About freshschool
-      </h1>
+      </h1> -->
 
       <div align="center">
         <h1 style="font-size: x-large; stroke: black; stroke-width: 10px">
@@ -85,16 +78,14 @@
           src="./assets/images/fws-teachers3.JPG"
           style="height: 300px; margin-left: 20px; border: 5px"
         />
-
-        <p style="font-size: x-large; text-align: center">
+      </div>
+        <p style="font-size: x-large;" class="center">
           The Staffs in FreshSchool has a huge experience in programming and
           Life skills. They are filled with skills and kindness, to teach
           students and also act as mentors.
         </p>
-      </div>
-
-      <div style="margin-left: 20px" align="center">
-        <h2 style="font-size: x-large">Learning Environment:</h2>
+        <h2 style="font-size: x-large" class="center">Learning Environment:</h2>
+      <div class="center">
         <img
           src="./assets/images/fws-class1.JPG"
           style="height: 400px; max-width: fit-content; margin-left: 50pxs"
@@ -102,29 +93,21 @@
           src="./assets/images/happywork.jpg1.jpg"
           style="height: 400px; margin-left: 20px; border: 5px"
         />
-        <p style="font-size: x-large">
+      </div>
+        <p style="font-size: x-large" class="center">
           FreshSchool has the Happy Learning Environment, that supports students
           for concentrating in their programming skills as well as life skills.
         </p>
-      </div>
-
-      <img
-        src="./assets/images/fw-home-collage.jpg"
-        style="height: auto; width: 800px; margin-left: 30%"
-      />
-
-      <div style="margin-left: 20px; position: relative"></div>
-    </div>
-    <footer>
-      <div id="contact">
-        <h1>Contact us</h1>
-        <p>Mail ID &#9993;: contact@freshshcool.com</p>
-        <p>Telephone &#9742;: 0421 22334</p>
-        <p>
-          Freshschool Inc. &copy; All rights reserved (2021) &nbsp;|&nbsp;
-          Website Designed by <i><b>trail blazers</b></i>
-        </p>
-      </div>
-    </footer>
+        <div class="center">
+      <img src="./assets/images/fw-home-collage.jpg" style="height: auto; width: 800px;"/>
+    </div>  
+        <br>  
+         <footer id="contact">
+                <h1>Contact us</h1>
+                <p>Mail ID &#9993;: contact@freshshcool.com </p>
+                <p>Telephone &#9742;: 0421 22334</p>
+                <p>Freshschool Inc. &copy; All rights reserved (2021)
+                    &nbsp;|&nbsp; Website Designed by <i><b>trail blazers</b></i></p>
+        </footer>
   </body>
 </html>

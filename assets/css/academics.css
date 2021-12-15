@@ -1,0 +1,78 @@
+body {
+    background-image: url("../images/fw-mainbg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #000;
+}
+
+.navbar {
+    height: 40px;
+    font-size: x-large;
+    border-radius: 20px;
+    color: black;
+    padding-top: 10px;
+}
+.fwlogo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+
+}
+
+#fwlogoname {
+    position: absolute;
+    top: 17px;
+    left: 59px;
+}
+
+ul {
+
+    list-style-type: none;
+    margin-top: 10px;
+    margin-left: 1px;
+
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.5s ease;
+}
+
+ul li a:hover {
+    border-radius: 20px;
+    border: 1px solid;
+}
+
+ul li.active a {
+    border: 1px solid black;
+    color: black;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+}
+#contact {
+    background-color: transparent;
+    color: black;
+}
+.list{
+    font-size:  150%;
+    margin-left: 5%;
+}
+.ques{
+    font-size:  150%;
+    font-weight: bold;
+    margin-left: 3%;
+}
+.ans{
+    font-size:  150%;
+    margin-left: 4%;
+}

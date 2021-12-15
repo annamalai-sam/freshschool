@@ -1,7 +1,4 @@
-*{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    
-}
+
 body{
     background-image: url("fw-mainbg.jpg");
     background-size: cover;
@@ -24,7 +21,6 @@ body{
 }
 .navbar{  
     font-size: 150%;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: black;
     padding-top: 0.5%;
 }

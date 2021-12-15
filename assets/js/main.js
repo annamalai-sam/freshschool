@@ -50,8 +50,6 @@ function loginAlert() {
 function emailValid(current_email) {
   let isUsed = false;
 
-  console.log(allfrm);
-
   for (i = 0; i < allfrm.length; i++) {
     const user = allfrm[i];
     const gmail = user.Email;

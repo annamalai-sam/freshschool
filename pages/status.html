@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../assets/css/status.css">
+    <link rel="shortcut icon" href="../assets/images/fwlogo.png "/>
+        <title>Fresh School </title>
+</head>
+<body> 
+    <header>
+        <div class="navbar" >
+          <img class="fwlogo" src="../assets/images/fwlogo.png" style="height: 43px;">
+          <label id="fwlogoname" >FreshSchool</label>
+          <ul align="center" style="color: #ffff;">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./facilities.html">Facilities</a></li>
+            <li><a href="./academics.html">Academic</a></li>
+            <li><a href="./fsgallery.html">Gallery</a></li>
+            <li><a href="./about.html">About Us</a></li>
+        </ul>   
+      </div> 
+      </header> <br> <br> 
+    <h1 class="title"> Application Status </h1>
+    <div class="search">
+      <form onsubmit="checkResult()">
+     <!-- <label class="contant"> Enter your resgistor mail here: </label> <br> <br>  -->
+            <input type="email" id="res_mail" 
+             placeholder="      Enter your resgistor mail here"
+              required class="box"> <br> <br>
+            <button class="btn" >Search</button>   
+    </form> <br>
+    <div id="note">
+      <table class="result" id="output">
+         
+      </table> 
+    </div>
+</div>
+<script src="./../assets/js/status.js"></script>
+</body>
+</html>

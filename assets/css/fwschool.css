@@ -1,9 +1,6 @@
-*
-
 body {
     background-image: url("../images/fw-mainbg.jpg");
     background-position: center;
-    height: 100;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -13,7 +10,6 @@ body {
 .navbar {
     height: 40px;
     font-size: x-large;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     border-radius: 20px;
     color: black;
     padding-top: 10px;

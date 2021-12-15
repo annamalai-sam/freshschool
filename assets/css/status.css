@@ -1,0 +1,124 @@
+body {
+    background-image: url("../images/fw-mainbg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #000;
+}
+.search{
+    margin-top: 5%;
+    align-items: center;
+    text-align: center;
+}
+.box{
+    width: 35%;
+    height: 35px;
+    border-radius: 15px;
+    font-size: 120%;
+}
+.btn{
+    width: 7%;
+    margin-top: 0.5%;
+    height: 25px;
+    border-radius: 10px;
+    font-size: 120%;
+    background-color:#000;
+    color: aliceblue;
+}
+.btn:hover{
+    color: #000;
+    background-color: aliceblue;
+}
+.title{
+    font-size: 200%;
+    text-align: center;
+}
+.navbar {
+    height: 40px;
+    font-size: x-large;
+    border-radius: 20px;
+    color: black;
+    padding-top: 10px;
+}
+.fwlogo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+
+}
+
+#fwlogoname {
+    position: absolute;
+    top: 17px;
+    left: 59px;
+}
+
+ul {
+
+    list-style-type: none;
+    margin-top: 10px;
+    margin-left: 1px;
+
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.5s ease;
+}
+
+ul li a:hover {
+    border-radius: 20px;
+    border: 1px solid;
+}
+
+ul li.active a {
+    border: 1px solid black;
+    color: black;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+}
+.result{
+    margin: auto;
+    margin-top:3%;
+    width: 70%;
+    border-collapse: collapse;
+    border: 1px solid black;
+    font-size: 140%;
+}
+.row{
+    border-collapse: collapse;
+    border: 1px solid black;    
+    padding: 1%;
+}
+/* <tr>
+<th class="row">
+    Name
+</th>
+<th class="row">
+    Date Of Birth
+</th>
+<th class="row">
+    Father's Name
+</th>
+<th class="row">
+    Email
+</th>
+<th class="row">
+    Result
+</th>
+</tr>
+<tr>
+<td class="row"></td>
+<td class="row"></td>
+<td class="row"></td>
+<td class="row"></td>
+<td class="row"></td>
+</tr> */
