@@ -60,6 +60,18 @@ ul li.active a {
     right: 15px;
     box-shadow: 10px 10px 60px;
 }
+.btn{
+    background-color: blue;
+    height: 50px;
+    width: 150px;
+    font-size: 20px;
+    border: none;
+    border-radius: 100px;
+    position: absolute;
+    top: 120px;
+    right: 15px;
+    box-shadow: 10px 10px 60px;
+}
 .batn:hover
 {
     background-color: white;
