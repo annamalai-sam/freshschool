@@ -1,0 +1,136 @@
+*{
+        font-family: 'Open Sans', sans-serif;
+}
+body{
+        background-color: rgb(238, 243, 243);
+}
+.fwlogo{
+        position: absolute;
+}
+.navBar{
+        margin-left: 15%;
+}
+ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+}
+ul li{
+        float: left;
+        text-align: center;
+        line-height: 130%;
+        height: 40px;
+        width: 175px;
+        background-color: rgb(238, 243, 243);
+        font-size: 25px;
+}
+ul li a {
+        text-decoration: none;
+        color: black;
+        text-shadow: black 0px 0px 1px;
+        display: block;
+      }
+ul li a:hover{
+        color: red;
+}
+ul li ul li {
+        display: none;
+}
+ul li:hover ul li{
+        display: block;
+}
+.tiledBackground {
+        background-image: url("../images/fw-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 100%;
+        /* margin-top: 10%;  */
+}
+.head{
+        color: white;
+        text-shadow: black 0px 0px 10px;
+        font-weight:700;
+        font-size: 600%;
+        text-align: center;
+}       
+.slogan{
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        text-shadow: black 0px 0px 10px;
+        font-size:400%;
+        margin-top: 3%;
+} 
+.slogan1{
+        color: white;
+        text-align: center;
+        font-weight: 450;
+        text-shadow: black 0px 0px 10px;
+        font-size:175%;
+        margin-top: 23%;
+        font-family: 'Source Sans Pro', sans-serif;
+} 
+.description{
+        text-align: center;
+        color: rgb(44, 44, 44);
+}
+.why{
+        color: #669db3ff;
+        text-align: center;
+        font-size: 220%;
+}
+.we{
+        text-align: center;
+        color:black;
+        font-size: 200%;
+}
+.G{
+        width:60%;
+        height:60%;
+        margin-left: 1.5%;
+        display: inline-block;
+}
+.list{
+        color:rgb(44, 44, 44);
+        list-style-type: square;
+        font-size: 190%;
+        margin-left: 3%;
+}
+.even{
+        color:rgb(44, 44, 44);
+        font-size: 150%;
+        text-align: center;
+}
+.evenImg{
+        width: 41%;
+        border-radius: 10px;
+        height:60%;
+        margin-left:6%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* colors{
+        gray;
+        rgb(238, 243, 243);
+        #669db3ff;
+        white;  
+        rgb(67, 70, 71);
+} */

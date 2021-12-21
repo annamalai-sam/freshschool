@@ -1,0 +1,59 @@
+body {
+    background-image: url("../images/fw-mainbg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #000;
+}
+.table{
+    margin: auto;
+    margin-top:3%;
+    width: 60%;
+    border-collapse: collapse;
+    border: 1px solid black; 
+    font-size: 140%;
+}
+td {
+    border: 1px solid black;
+    padding: 1%;
+}
+th{
+    border: 1px solid black;
+    padding: 1%;
+    width: 35%;
+}
+select option{
+     text-align: center; 
+}
+/* <tr>   
+<th> Name </th>
+<td id="name">  </td>
+</tr>
+<tr>   
+<th> Date Of Birth </th>
+<td>  </td>
+</tr>
+<tr>   
+<th> Father's Name </th>
+<td>  </td>
+</tr>
+<tr>   
+<th> Email </th>
+<td>  </td>
+</tr>
+<tr>   
+<th> Result </th>
+<td>  </td>
+</tr>
+<form onsubmit="update()">
+  <label for="result"> Result </label>
+  <select id="result">
+  <option selected>----</option>
+  <option>Selected</option>
+  <option>Waiting list</option>
+  <option>Not selected</option>
+  <input type="submit" value="Enter">
+  </select>
+  </form>
+*/

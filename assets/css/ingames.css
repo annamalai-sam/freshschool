@@ -14,6 +14,7 @@ ul{
     list-style: none;
     margin: 0;
     padding: 0;
+
 }
 ul li{
     float: left;
@@ -32,7 +33,6 @@ ul li a {
   }
 ul li a:hover{
     color: red;
-    width: auto;
 }
 ul li ul li {
     display: none;
@@ -40,16 +40,22 @@ ul li ul li {
 ul li:hover ul li{
     display: block;
 }
-.list{
-    font-size:  150%;
-    margin-left: 5%;
+.why{
+    color: black;
+    text-align: center;
+    font-size: 220%;
 }
-.ques{
-    font-size:  150%;
-    font-weight: bold;
-    margin-left: 3%;
+.cen{
+    width: 20%;
+    height: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
-.ans{
-    font-size:  150%;
-    margin-left: 4%;
-}
+.pics{
+    margin-top: 5%;
+    margin-left: 8%;
+    border-radius: 10px;
+    width: 40%;
+    height: 50%;
+ }

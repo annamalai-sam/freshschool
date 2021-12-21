@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    body{
+      background-color: aliceblue;
+    }
+    ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    ul li{
+      float: left;
+      text-align: center;
+      width: 75px;
+      height: 20px;
+    }
+    ul li a {
+      text-decoration: none;
+    }
+    ul li ul li {
+      display: none;
+    }
+    ul li:hover ul li{
+      display: block;
+    } 
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a href="#">Not hover </a></li>
+      <li><a href="#"> Hover </a>
+      <ul>
+        <li><a href="#">Link </a></li>
+        <li><a href="#">Link </a></li>
+        <li><a href="#">Link </a></li>
+      </ul>
+    </li>
+    <li><a href="#">Not hover </a></li>
+    <li><a href="#">Hover </a>
+      <ul>
+        <li><a href="#">Link </a></li>
+        <li><a href="#">Link </a></li>
+        <li><a href="#">Link </a></li>
+      </ul>
+    </li>
+    <li><a href="#">Hover </a>
+      <ul>
+        <li><a href="#">Link </a></li>
+        <li><a href="#">Link </a></li>
+        <li><a href="#">Link </a></li>
+      </ul>
+    </li>
+    <li><a href="#">Not hover </a></li>
+    </ul>
+  </body>
+</html>

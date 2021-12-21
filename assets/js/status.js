@@ -1,6 +1,8 @@
 
 function checkResult(){
     event.preventDefault();
+    console.group("Console_1")
+    console.log("First log");
     let mail = document.getElementById("res_mail").value;
 
     let mailExist = output(mail);
@@ -8,9 +10,10 @@ function checkResult(){
     if(mailExist){
         alert("Mail does not Exist");
     }
+    console.groupEnd();
 }
 function output (mail){
-
+    console.group("console_2");
     let exist = true;
 
     let apply_status = JSON.parse(localStorage.getItem("All_form"));
@@ -27,14 +30,15 @@ function output (mail){
             </tr>`;
 
             document.getElementById("output").innerHTML = result;
-            //  console.log(gmail);
-            //  console.log(user.First_Name);
-            //  console.log(user.Last_name);
-            //  console.log(user.DOB);
-            //  console.log(user.Par_name);
+             console.log(gmail);
+             console.log(user.First_Name);
+             console.log(user.Last_name);
+             console.log(user.DOB);
+             console.log(user.Par_name);
              exist = false;
             break;
         }
     }
+    console.groupEnd();
     return exist;
 }

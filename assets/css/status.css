@@ -1,9 +1,44 @@
-body {
-    background-image: url("../images/fw-mainbg.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    color: #000;
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    background-color: rgb(238, 243, 243);
+}
+.fwlogo{
+    position: absolute;
+}
+.navBar{
+    margin-left: 15%;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+ul li{
+    float: left;
+    text-align: center;
+    line-height: 130%;
+    height: 40px;
+    width: 175px;
+    background-color: rgb(238, 243, 243);
+    font-size: 25px;
+}
+ul li a {
+    text-decoration: none;
+    color: black;
+    text-shadow: black 0px 0px 1px;
+    display: block;
+  }
+ul li a:hover{
+    color: red;
+}
+ul li ul li {
+    display: none;
+}
+ul li:hover ul li{
+    display: block;
 }
 .search{
     margin-top: 5%;
@@ -51,39 +86,6 @@ body {
     position: absolute;
     top: 17px;
     left: 59px;
-}
-
-ul {
-
-    list-style-type: none;
-    margin-top: 10px;
-    margin-left: 1px;
-
-}
-
-ul li {
-    display: inline-block;
-}
-
-ul li a {
-    text-decoration: none;
-    color: black;
-    padding: 5px 20px;
-    border: 1px solid transparent;
-    transition: 0.5s ease;
-}
-
-ul li a:hover {
-    border-radius: 20px;
-    border: 1px solid;
-}
-
-ul li.active a {
-    border: 1px solid black;
-    color: black;
-    border-radius: 20px;
-    background-color: black;
-    color: white;
 }
 .result{
     margin: auto;
