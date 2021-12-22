@@ -21,7 +21,7 @@ function loginAlert() {
   let par_name = document.getElementById("par_name").value;
   let par_email = document.getElementById("par_email").value;
   let par_num = document.getElementById("par_num").value;
-  let address = document.getElementById("address").value;
+  let address = document.getElementById("address").value; 
 
   const isEmailAlreadyExist = emailValid(email);
 
