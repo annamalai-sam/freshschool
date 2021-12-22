@@ -45,6 +45,7 @@ function loginAlert() {
     allfrm.push(form);
     console.log(allfrm);
     localStorage.setItem("All_form", JSON.stringify(allfrm));
+    alert("Successfully Registored");
   }
 }
 function emailValid(current_email) {

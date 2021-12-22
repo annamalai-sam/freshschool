@@ -26,7 +26,7 @@ function output (mail){
              <th class="row"> Name </th> <th class="row"> Date Of Birth </th> <th class="row"> Father's Name </th> <th class="row"> Email </th> <th class="row"> Result </th>
             </tr>
             <tr> 
-            <td class="row">${user.First_Name} ${user.Last_name}</td> <td class="row"> ${user.DOB} </td><td class="row">  ${user.Par_name}</td> <td class="row"> ${user.Email}</td> <td class="row">---</td>
+            <td class="row">${user.First_Name} ${user.Last_name}</td> <td class="row"> ${user.DOB} </td><td class="row">  ${user.Par_name}</td> <td class="row"> ${user.Email}</td> <td class="row"> ${user.status} </td>
             </tr>`;
 
             document.getElementById("output").innerHTML = result;
