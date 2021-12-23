@@ -18,7 +18,7 @@ function output (mail){
 
     let apply_status = JSON.parse(localStorage.getItem("All_form"));
     
-    for (i = 0; i < apply_status.length; i++) {
+    for (let i = 0; i < apply_status.length; i++) {
         const user = apply_status[i];
         const gmail = user.Email;
         if (mail == gmail){

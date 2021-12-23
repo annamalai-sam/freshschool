@@ -11,7 +11,7 @@ function why(email, index) {
             </select>`;
 };
 let fullName = "";
-for (i = 0; i < result.length; i++) {
+for (let i = 0; i < result.length; i++) {
   const user = result[i];
   let Name = ` <table class="table"> <tr> <th> Name </th>
                 <td> ${user.First_Name} ${user.Last_name} </td> </tr>

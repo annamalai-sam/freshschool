@@ -75,13 +75,6 @@ ul li:hover ul li{
     color: black;
     padding-top: 10px;
 }
-.fwlogo {
-    position: absolute;
-    top: 10px;
-    left: 20px;
-
-}
-
 #fwlogoname {
     position: absolute;
     top: 17px;
