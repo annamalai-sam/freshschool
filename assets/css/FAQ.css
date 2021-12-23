@@ -42,25 +42,68 @@ ul li ul li {
 ul li:hover ul li{
     display: block;
 }
+section{
+    width: 60%;
+    height: 60vh;
+    border-radius: 10px;
+    background-color:#669db3ff;
+    margin-left: 5%;
+    display: inline-block;
+}
+.inputQuestion{
+    /* display: inline-flex; */
+    margin-left: 3%;
+    background-color: red;
+    border-radius: 20px;
+}
+.title{
+    color: aliceblue;
+    text-align: center;
+}
+.main{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+.contant-item{
+    color:black;
+    border-radius: 10px;
+    background-color: darkgray;
+    margin-bottom: 10px;
+    padding: 5px;
+    /* box-shadow: ; */
+}
+.contant-link{
+    background-color: darkgray;
+    text-decoration: none;
+    font-size: 175%;    
+}
 .ans{
     max-height: 0;
     overflow: hidden;
     position: relative;
     transition: max-height 700ms;
 }
+.ans::before{
+    content: " ";
+    width: 0.5%;
+    height: 90%;
+    background-color: aliceblue;
+    position: absolute;
+    left: 0;
+
+}
+.ans p{
+    font-size: 120%;
+    margin-left: 10px;
+    padding: 3%;
+}
 .contant-item:target .ans{
-    max-height: 30px;
+    max-height: 100px;
 }
-.contant-item{
-    color:black;
-    border-radius: 10px;
-    background-color: aqua;
-}
+
 .tit{
     color:#669db3ff;
     font-size: 600%;
-}
-.contant-item a{
-    background-color: #669db3ff;
-    text-decoration: none;
 }

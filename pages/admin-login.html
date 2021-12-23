@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FreshSchool | Admin-Login</title>
+        <link rel="stylesheet" type="text/css" href="../assets/css/admin-login.css">
+        <link rel="shortcut icon" href="../assets/images/fwlogo.png "/>
+        <title>FreshSchool | Enroll</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <img
+        class="fwlogo" src="https://www.freshworks.com/static-assets/images/common/company/logos/logo-fworks-black.svg"/>
+        <div class="navBar">
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li ><a>Facilities</a>
+                <ul>
+                  <li><a href="./cafeteria.html">Cafeteria</a></li>
+                  <li><a href="./ingames.html">Indoorgames</a></li>
+                  <li><a href="./gym.html">GYM</a></li>
+                </ul>
+                </li>         
+                <li><a href="#">Gallery</a>
+                  <ul>
+                    <li><a href="./fw.html"></a>Freshworks</li>
+                    <li><a href="./gallery.html">FWSA</a></li>
+                    <li><a href="./success.html">Our Succes</a></li>
+                  </ul>
+                  <li><a href="./academics.html">Academics</a></li>
+                  </li>
+                  <li><a>Admission</a>
+                    <ul>
+                      <li><a href="./fw-enroll.html">Enroll now </a></li>
+                      <li><a href="./status.html">Check Status </a></li>
+                    </ul>
+                    </li>
+                    <li><a href="./contact.html"> Contact</a></li>
+                    <li><a href="./FAQ.html">FAQ </a></li>
+            </ul>
+          </div> <br> <br> <br> <br>
+        <h1 class="title">FreshSchool Login</h1>
+        <div class="formbox" align="center">
+            <form class="loginform" align="center" onsubmit="login()">
+                <img src="../assets/images/login-circle.svg" style="height:50px;">
+                <h2 class="head">Admin Login</h2>
+                <span id="alert"></span>
+                <label class="head">Office Mail:</label>
+                <input  type="email" id="inputMail" class="input" placeholder="Enter Office Email Address" required> <br>
+                <label class="head">Password:</label>
+                <input class="input" type="password" id="inputPassword" required placeholder="Enter Password"><br>
+                <input class="button" type="submit">
+            </form>
+        </div>
+        <script src="../assets/js/admin-login.js"></script>
+    </body>
+</html>

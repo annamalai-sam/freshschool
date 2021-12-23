@@ -1,19 +1,72 @@
 <html>
     <head>
         <title>Freshworks</title>
-        <link rel="stylesheet" type="text/css"
-            href="../assets/css/fwschool.css">
+        <link rel="stylesheet" type="text/css" href="../assets/css/gallery.css">
+        <link rel="shortcut icon" href="../assets/images/fwlogo.png"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
         <style>
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    background-color: rgb(238, 243, 243);
+}
+.fwlogo{
+    position: absolute;
+}
+.navBar{
+    margin-left: 15%;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+ul li{
+    float: left;
+    text-align: center;
+    line-height: 130%;
+    height: 40px;
+    width: 175px;
+    background-color: rgb(238, 243, 243);
+    font-size: 25px;
+}
+ul li a {
+    text-decoration: none;
+    color: black;
+    text-shadow: black 0px 0px 1px;
+    display: block;
+  }
+ul li a:hover{
+    color: red;
+}
+ul li ul li {
+    display: none;
+}
+ul li:hover ul li{
+    display: block;
+}
     img {
         border-radius: 20px 20px;
         margin-left:100px;
     }
+    .img {
+    border-radius: 20px 20px;
+    width : 30%;
+    height : 300px;
+    margin-left : 3%;
+    margin-bottom: 5%;
+}
     p {
         font-size: 30px;
         margin-bottom: 300px;
     }
     .p {
         margin-bottom: 10px;
+        text-align: center;
         text-indent: 8%;
     }
     .class {
@@ -28,20 +81,55 @@
 </style>
     </head>
     <body>
-        <b>
+        <img
+        class="fwlogo"
+        src="https://www.freshworks.com/static-assets/images/common/company/logos/logo-fworks-black.svg"
+      />
+      <div class="navBar">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li ><a>Facilities</a>
+            <ul>
+              <li><a href="./cafeteria.html">Cafeteria</a></li>
+              <li><a href="./ingames.html">Indoorgames</a></li>
+              <li><a href="./gym.html">GYM</a></li>
+              <!-- <li><a href="#">Library</a></li> -->
+            </ul>
+            </li>         
+            <li><a href="#">Gallery</a>
+              <ul>
+                <li><a href="./fw.html"></a>Freshworks</li>
+                <li><a href="./gallery.html">FWSA</a></li>
+                <li><a href="./success.html">Our Succes</a></li>
+                <!-- <li><a href="#">CEO</a></li> -->
+                <!-- <li><a href="#"></a></li> -->
+              </ul>
+              <li><a href="./academics.html">Academics</a></li>
+              </li>
+              <li><a>Admission</a>
+                <ul>
+                  <li><a href="./fw-enroll.html">Enroll now </a></li>
+                  <li><a href="./status.html">Check Status </a></li>
+                  <!-- <li><a href="#">  </a></li> -->
+                </ul>
+                </li>
+                <li><a href="./contact.html"> Contact</a></li>
+                <li><a href="./FAQ.html">FAQ </a></li>
+        </ul>
+      </div> <br> <br>
             <h1 align="center">&nbsp; &nbsp; OUR SUCCESS</h1><br><br>
-            <img src="culture.jpeg" alt="" width="500" height="333">
-            <img src="ceo.jpg" alt="" width="500" height="333">
-            <img src="fw.jpg" alt="" width="500" height="333">
+            <img src="../assets/images/culture.jpeg" class="img" alt="" width="500" height="333">
+            <img src="../assets/images/ceo.jpg" class="img" alt="" width="500" height="333">
+            <img src="../assets/images/fw.jpg" class="img" alt="" width="500" height="333">
             <br><br>
-            <img src="fw2.jpg" alt="" width="500" height="333">
-            <img src="t2.jpg" alt="" width="500" height="333">
-            <img src="t3.jpeg" alt="" width="500" height="333">
+            <img src="../assets/images/fw2.jpg" class="img" alt="" width="500" height="333">
+            <img src="../assets/images/t2.jpg" class="img" alt="" width="500" height="333">
+            <img src="../assets/images/t3.jpeg" class="img" alt="" width="500" height="333">
             <br><br>
 
             <h1 align="center">A DECADE OF FRESHWORKS</h1><br><br>
             <div class="class">
-                <img src="startup.jpeg" alt="" width="500" height="333"
+                <img src="../assets/images/startup.jpeg" alt="" width="500" height="333"
                     align="left">
                 <div class="subclass">
                     <p align="center">In 2010,<br>
@@ -50,73 +138,69 @@
                 </div>
             </div>
             <div class="class">
-                <img src="g2.png" alt="" width="500" height="333" align="left">
+                <img src="../assets/images/g2.png" alt="" width="500" height="333" align="left">
                 <div class="subclass">
                     <p align="center">In 2011,<br>Co raises 1 million $ from VC
                         firm Accel in first round.</p>
                 </div>
             </div>
             <div class="class">
-                <img src="g3.jpeg" alt="" width="500" height="333" align="left">
+                <img src="../assets/images/g3.jpeg" alt="" width="500" height="333" align="left">
                 <div class="subclass">
                     <p align="center">In 2012,<br>Co raises 5 million $,from
                         Tiger Global Management,Accel.</p>
                 </div>
             </div>
             <div class="class">
-                <img src="g4.jpg" alt="" width="500" height="333" align="left">
+                <img src="../assets/images/g4.jpg" alt="" width="500" height="333" align="left">
                 <div class="subclass">
                     <p align="center">In 2015,<br>Acquires 1CLICK.io,Konotor,and
                         Frilp.</p>
                 </div>
             </div>
             <div class="class">
-                <img src="g5.jpg" alt="" width="500" height="333" align="left">
+                <img src="../assets/images/g5.jpg" alt="" width="500" height="333" align="left">
                 <div class="subclass">
                     <p align="center"">In 2016,<br>Launches a CRM
                         product-Freshsales.</p>
                 </div>
             </div>
             <div class="class">
-                <img src="g5.png" alt="" width="500" height="333" align="left">
+                <img src="../assets/images/g5.png" alt="" width="500" height="333" align="left">
                 <div class="subclass">
                     <p align="center">In 2017,<br>Rebrands FRESHDESK to
                         FRESHWORKS.</p>
                 </div>
             </div>
             <div class="class">
-                <img src="g6.jpg" alt="" width="500" height="333" align="left">
+                <img src="../assets/images/g6.jpg" alt="" width="500" height="333" align="left">
                 <div class="subclass">
                     <p align="center">In 2018,<br>Crosses 100 million $ in ARR</p>
                 </div>
             </div>
             <div class="class">
-                <img src="g7.jpg" alt="" width="500" height="333" align="left">
+                <img src="../assets/images/g7.jpg" alt="" width="500" height="333" align="left">
                 <div class="subclass">
                     <p align="center">In 2019,<br>CEO of Freshworks moves to the
                         US with a goal of US IPO.</p>
                 </div>
             </div>
             <div class="class">
-                <img src="g8.jpg" alt="" width="500" height="333" align="left">
+                <img src="../assets/images/g8.jpg" alt="" width="500" height="333" align="left">
                 <div class="subclass">
                     <p align="center">In 2020,<br>Crosses 200 million $ in
                         annual recruing revenue.</p>
                 </div>
             </div>
             <div class="class">
-                <img src="t3.jpeg" alt="" width="500" height="333" align="left">
+                <img src="../assets/images/t3.jpeg" alt="" width="500" height="333" align="left">
                 <div class="subclass">
                     <p align="center">In 2021,<br>FRESHWORKS listed on NASDAQ as
                         "FRSH"<br>The second SAAS Indian company listed on
                         nasdaq.</p>
                 </div>
             </div>
-            <p class="p">"When people say enterpreneurship is about taking
-                risks,I say that it's minimizing the numbers of risks that you
-                take."</p>
-            <h3 align="right" style="margin-right: 40px;">-GIRISH
-                MATRUBOOTHAM&nbsp;<br>
-                CEO of FRESHWORKS &nbsp;</h3>
+            <p class="p">"When people say enterpreneurship is about taking risks,I say that it's minimizing the numbers of risks that you take."</p>
+            <h3 align="right" style="margin-right: 100px;">-GIRISH MATRUBOOTHAM <br> CEO of FRESHWORKS &nbsp;</h3>
         </body>
     </html>

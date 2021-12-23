@@ -49,6 +49,7 @@ function loginAlert() {
   }
 }
 function emailValid(current_email) {
+  
   let isUsed = false;
 
   for (i = 0; i < allfrm.length; i++) {
