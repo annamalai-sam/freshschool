@@ -48,29 +48,29 @@
         <button class="btn" onclick="window.location.href='./status.html';">Application status</button>
         <div class="enroll_box1">
             <form onsubmit="loginAlert()">
-                <table> <th></th>
+                <table> 
                     <tr>
-                        <td>
+                        <th scope="row">
                             <label>First Name: </label>
-                        </td>
+                        </th>
                         <td>
                             <input type="text" id="firstname" pattern="[a-zA-Z]{3,}"
                                 placeholder="Enter Firstname" required >
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <th scope="row">
                             <label>Last Name: </label>
-                        </td>
+                        </th>
                         <td>
                             <input  type="text" id="lastname" pattern="[a-zA-Z]{3,}"
                                 placeholder="Enter Lastname" required >
                         </td>
                     </tr> 
                         <tr>
-                            <td>
+                            <th scope="row">
                                 <label>Email: </label>
-                            </td>
+                            </th>
                             <td>
                                 <input  type="email"
                                     placeholder="Enter Email Address"
@@ -78,9 +78,9 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <th scope="row">
                                 <label>Phone Number:</label>
-                            </td>
+                            </th>
                             <td>
                                 <input  type="tel" id="stu_num"
                                     pattern="[0-9]{10}"
@@ -88,9 +88,9 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <th scope="row">
                                 <label>DOB:</label>
-                            </td>
+                            </th>
                             <td>
                                 <input  type="date" min="2001-01-01" id="dob"
                                     max="2004-12-31" placeholder="Enter DOB"
@@ -98,9 +98,9 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <th scope="row">
                                 <label>HSC Certificate(Digital):</label>
-                            </td>
+                            </th>
                             <td>
                                 <input  type="file" id="document"
                                     accept=".doc,.docx,application/msword,image/png,
@@ -113,18 +113,18 @@
                 <div class="enroll_box2">
                     <table> <th></th>
                         <tr>
-                            <td>
+                            <th scope="row">
                                 <label>Name:</label>
-                            </td>
+                            </th>
                             <td>
                                 <input  type="text" id="par_name" pattern="[a-zA-Z]{3,}"
                                     placeholder="Parent/Gaurdian's Name" required>
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <th scope="row">
                                 <label>Email: </label>
-                            </td>
+                            </th>
                             <td>
                                 <input  type="email"
                                     placeholder="Enter Email Address"
@@ -132,9 +132,9 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <th scope="row">
                                 <label>Phone Number:</label>
-                            </td>
+                            </th>
                             <td>
                                 <input  type="tel" pattern="[0-9]{10}"
                                     id="par_num" placeholder="Enter Ph number" required
@@ -144,11 +144,11 @@
                     </table>
                 </div>
                 <div class="enroll_box3">
-                    <table> <th></th>
+                    <table> 
                         <tr>
-                            <td>
+                            <th scope="row">
                                 <label>Address :</label>
-                            </td>
+                            </th>
                             <td>
                                 <textarea  placeholder="Enter Address here"
                                     id="address" rows="3" cols="90" required ></textarea>

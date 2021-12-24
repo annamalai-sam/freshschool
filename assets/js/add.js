@@ -27,7 +27,8 @@ for (let i = 0; i < result.length; i++) {
 document.getElementById("output").innerHTML = fullName;
 
 function update(even) {
-    
+
+  
     result[even.target.dataset.index].status = even.target.value;
 
     console.log(result);
