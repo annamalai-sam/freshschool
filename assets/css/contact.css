@@ -58,3 +58,15 @@ ul li:hover ul li{
     justify-content: center;
     display: flex;
 }
+.insta{
+    background-color:red;
+    border-radius: 10px;
+    align-items: center; 
+    text-align: center; 
+    width: 20%; 
+    margin-left: 3%;
+}
+.btn{
+    background-color: brown;
+    border: none;
+}

@@ -9,7 +9,7 @@ function why(email, index) {
             <option>Waiting list</option>
             <option>Not selected</option>
             </select>`;
-};
+}
 let fullName = "";
 for (let i = 0; i < result.length; i++) {
   const user = result[i];

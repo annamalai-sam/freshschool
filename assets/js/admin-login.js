@@ -17,7 +17,7 @@ function login (){
 }
     function userCheck(paramail,parapass){
         let isadmin = false;
-        for (i = 0; i < all_admin.length; i++){
+        for (let i = 0; i < all_admin.length; i++){
             const user = all_admin[i];
             const gmail = user.ad_mail;
             const pass = user.ad_pass;
