@@ -53,3 +53,8 @@ ul li:hover ul li{
 .map{
     margin-left: 10%;   
 }
+.table{
+    margin: auto;
+    justify-content: center;
+    display: flex;
+}
