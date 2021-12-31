@@ -42,7 +42,7 @@ ul li ul li {
 ul li:hover ul li{
     display: block;
 }
-section{
+.section{
     width: 60%;
     height: 60vh;
     border-radius: 10px;

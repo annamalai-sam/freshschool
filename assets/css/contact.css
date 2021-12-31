@@ -58,15 +58,30 @@ ul li:hover ul li{
     justify-content: center;
     display: flex;
 }
-.insta{
-    background-color:red;
+.soc{
     border-radius: 10px;
     align-items: center; 
     text-align: center; 
+    height: auto;
     width: 20%; 
     margin-left: 3%;
+    background-color: rgb(238, 243, 243);
+    box-shadow: black  0px 0px 20px;
 }
 .btn{
-    background-color: brown;
+    background-color:white;
+    color:gray;
+    font-size: 150%;
     border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: black  0px 0px 20px;
+}
+.logo{
+    width: 50%;
+    height: 150px;
+}
+.id{
+    color: black;
+    font-size: 160%;
 }

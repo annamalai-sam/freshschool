@@ -1,0 +1,72 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    background-color: rgb(238, 243, 243);
+}
+.fwlogo{
+    position: absolute;
+    margin-left: 0;
+}
+.navBar{
+    margin-left: 15%;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+ul li{
+    float: left;
+    text-align: center;
+    line-height: 130%;
+    height: 40px;
+    width: 175px;
+    background-color: rgb(238, 243, 243);
+    font-size: 25px;
+}
+ul li a {
+    text-decoration: none;
+    color: black;
+    text-shadow: black 0px 0px 1px;
+    display: block;
+  }
+ul li a:hover{
+    color: red;
+}
+ul li ul li {
+    display: none;
+}
+ul li:hover ul li{
+    display: block;
+}
+    img {
+        border-radius: 20px 20px;
+        margin-left:100px;
+    }
+    .img {
+    border-radius: 20px 20px;
+    width : 30%;
+    height : 300px;
+    margin-left : 3%;
+    margin-bottom: 5%;
+}
+    p {
+        font-size: 30px;
+        margin-bottom: 300px;
+    }
+    .p {
+        margin-bottom: 10px;
+        text-align: center;
+        text-indent: 8%;
+    }
+    .class {
+        height: 360px;
+        position: relative;
+    }
+    .subclass {
+        margin-top: 7%;
+        margin-left: 50%;
+        position: absolute;
+    }

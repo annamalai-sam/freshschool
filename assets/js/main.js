@@ -41,11 +41,15 @@ function loginAlert() {
       "Par_email": par_email,
       "Par_num": par_num,
       "address": address,
+      "status":"Enrolled",
     };
+    console.log(form);
     allfrm.push(form);
     console.log(allfrm);
     localStorage.setItem("All_form", JSON.stringify(allfrm));
-    alert("Successfully Registored");
+    document.getElementById("output").innerHTML = `<h1 class="notice"> Successfully Registored </h1>`;
+    // alert("Successfully Registored");
+
   }
 }
 function emailValid(current_email) {
