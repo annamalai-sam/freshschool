@@ -10,11 +10,11 @@
 3.Add status
    Admin wants modify the result of the students 
 
-4.
+4.Show status 
   User must enter mail 
   check the mail if is exist show the result for the same mail
   if mail not exist alert Mail does not Exist
 
 5.FAQ 
      currently working
-     
+
