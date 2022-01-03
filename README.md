@@ -1,4 +1,3 @@
-# html-project-template
 1.Enroll 
   Mail cannot be repeat
   D.O.B must between 2001-01-01 to 2004-12-31
@@ -15,4 +14,7 @@
   User must enter mail 
   check the mail if is exist show the result for the same mail
   if mail not exist alert Mail does not Exist
-      
+
+5.FAQ 
+     currently working
+     
