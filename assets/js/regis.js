@@ -1,11 +1,11 @@
 let all_adm = [
     {
-      "ad_mail":"prasannabharati.ram@freshworks.com",  
-      "ad_pass":"FWE1457C",
-    },
-    {
         "ad_mail":"chitra.muthukumaran@freshworks.com",  
         "ad_pass":"FWE1019C",
+    },
+    {
+      "ad_mail":"prasannabharati.ram@freshworks.com",  
+      "ad_pass":"FWE1457C",
     },
     {
         "ad_mail":"shanmuga.anandaraman@freshworks.com",  
@@ -13,3 +13,4 @@ let all_adm = [
     },
 ]
 localStorage.setItem("allAdmin", JSON.stringify(all_adm));
+window.location.href='../../pages/admin-login.html';

@@ -8,23 +8,26 @@ function login (){
     console.log(adminExist);
     if (adminExist){
         alert("logged in succesfully");
+        window.location.href='../../pages/add.html';
+        // let output1 = `<p style="color: red;"> logged in succesfully </p>`;
+        // document.getElementById("alert").innerHTML = output1
     }
     else{
-        let output = `<p style="color: red;"> Mail id and password does not match </p>`;
-        console.log(output);
-        document.getElementById("alert").innerHTML = output; 
+        let output2 = `<p style="color: red;"> Mail id and password does not match </p>`;
+        console.log(output2);
+        document.getElementById("alert").innerHTML = output2; 
     }
 }
     function userCheck(paramail,parapass){
-        let isadmin = false;
+        let adminhere = false;
         for (let i = 0; i < all_admin.length; i++){
             const user = all_admin[i];
             const gmail = user.ad_mail;
             const pass = user.ad_pass;
             if (paramail==gmail && parapass==pass){
-                isadmin = true;
+                adminhere = true;
                 break;
             }
         }
-        return isadmin;
+        return adminhere;
     }

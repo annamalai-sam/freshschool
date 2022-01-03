@@ -118,7 +118,24 @@ ul li:hover ul li{
         margin-bottom: 5%;
     }
 
-
+.btn{
+        background-color: blue;
+        height: 55px;
+        width: 150px;
+        font-size: 20px;
+        cursor: pointer;
+        border: none;
+        border-radius: 100px;
+        color: white;
+        position: absolute;
+        top: 100px;
+        right: 100px;
+        box-shadow: 10px 10px 60px;
+}
+.btn:hover{
+        background-color: rgb(238, 243, 243);
+        color: black;
+}
 
 
 
