@@ -1,0 +1,51 @@
+*{
+        font-family: 'Open Sans', sans-serif;
+}
+body{
+        background-color: rgb(238, 243, 243);
+}
+.ans{
+    border-radius: 5px;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border: none; 
+    background-color: darkgray;
+    font-size: 140%;
+    resize: none;
+    color: black;
+}
+.btn{
+    color: black;
+    background-color:whitesmoke;
+    border-radius: 7px;
+    font-size: 120%;
+    border: none;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+.btn:hover{
+    background-color: darkgray;
+    color:whitesmoke;
+}
+.contant{
+    border: 1px black solid; 
+    border-radius: 10px;
+    width: 100%; 
+    margin: 10px;
+}
+.asker{
+    text-align: center;
+    font-size: 180%;
+    color: red;
+}
+.asked{
+    margin-left: 10%;
+    margin-top: 5%;
+    font-size: 150%;
+}

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../assets/css/FAQ.css">
+    <link rel="stylesheet" href="../assets/css/faq.css">
     <link rel="shortcut icon" href="../assets/images/fwlogo.png" />
     <title>FreshSchoo | FAQ </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,25 +40,24 @@
             <li><a href="./contact.html"> Contact</a></li>
             <li><a href="./FAQ.html">FAQ </a></li>
     </ul>
-  </div> <br> <br><br>
-   <h1 class="tit">Frequently Asked Questions</h1>
-
-
+  </div>
+<br> <br><br>
+<h1 class="tit">Frequently Asked Questions</h1>
+<div class="pagemain">
 <div  class="section">
-
   <div class="main">
-      <h1 class="title">General</h1>
+    <h1 class="title">General</h1>
       <div class="contant-item" id="question1">
         <a class="contant-link" href="#question1">
           question1
         </a>
         <div class="ans">
           <p>
-            answer1 answer1 answer1 answer1 answer1 answer1 answer1 answer1 answer1 answer1 answer1 answer1 answer1 answer1 answer1 
+            answer1answer1answer1answer1answer1answer1answer1answer1answer1answer
+            1answer1answer1answer1answer1answer1                
           </p>
         </div>
       </div>
-
       <div class="contant-item" id="question2">
         <a class="contant-link" href="#question2">
           question2
@@ -69,45 +68,18 @@
           </p>
         </div>
       </div>
-
   </div>
-
 </div>
 
-<!-- <div class="inputQuestion">  
-  <label>
-    Ask Question If You Have
-  </label>
-<input type="text" id="inputQuestion">
-</div> -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div class="input">
+  <form onsubmit="addQueries();">
+<textarea placeholder="  Ask if you have any queries  " rows="3" id="query" class="query" cols="50" required></textarea>
+<input type="email" name="" placeholder="Enter your Mail" id="mail" class="mail" required> <br> <br> <br>
+<button class="btn"> Submit </button>
+</form>
+</div> <br> <br>
+</div>
+<script src="../assets/js/faq.js"></script>
 </body>
 </html>

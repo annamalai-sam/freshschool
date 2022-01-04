@@ -66,3 +66,9 @@ function emailValid(current_email) {
   }
   return isUsed;
 }
+
+function sendmail(){
+  let email = document.getElementById("email").value;
+  console.log(email);
+  alert("linked");
+}

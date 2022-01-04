@@ -96,7 +96,7 @@ ul li:hover ul li{
 }
 .ans p{
     font-size: 120%;
-    margin-left: 10px;
+    margin-left: 1px;
     padding: 3%;
 }
 .contant-item:target .ans{
@@ -106,4 +106,59 @@ ul li:hover ul li{
 .tit{
     color:#669db3ff;
     font-size: 600%;
+}
+.pagemain{
+    display: flex;
+}
+.input{
+    margin-left: 3%;
+    width: 35%;
+    margin-right: 3%;
+    border-radius: 10px;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: #669db3ff;
+}
+.query{
+    border-radius: 7px;
+    width: 100%;
+    margin: auto;
+    margin-top: 10%;
+    border: none; 
+    background-color: whitesmoke;
+    font-size: 130%;
+    height: 235px;
+    resize: none;
+    box-shadow: 0px 0px 40px; 
+}
+.mail{
+    border-radius: 7px;
+    width: 100%;
+    margin: auto;
+    border: none; 
+    background-color: whitesmoke;
+    font-size: 130%;
+    margin-top: 5%;
+    height: 50px;
+    box-shadow: 0px 0px 40px; 
+    /* line-height: 28px; */
+}
+.btn{
+    background-color:whitesmoke;
+    height: 55%;
+    width: 30%;
+    border-radius: 7px;
+    font-size: 120%;
+    border: none;
+    color: black;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    box-shadow: 0px 0px 40px; 
+}
+.btn:hover{
+    background-color: black;
+    color:whitesmoke;
+    
 }
