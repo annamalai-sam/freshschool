@@ -48,6 +48,7 @@ function loginAlert() {
     console.log(allfrm);
     localStorage.setItem("All_form", JSON.stringify(allfrm));
     document.getElementById("output").innerHTML = `<h1 class="notice"> Successfully Registored </h1>`;
+    sendMail(email);
     // alert("Successfully Registored");
 
   }
@@ -67,8 +68,16 @@ function emailValid(current_email) {
   return isUsed;
 }
 
-function sendmail(){
-  let email = document.getElementById("email").value;
-  console.log(email);
-  alert("linked");
+
+function sendMail(mail){
+  console.log(mail);
+  Email.send({
+      Host : "smtp.gmail.com",
+      Username : "freshschoolsb2@gmail.com",
+      Password : "chitra@B2",
+      To : mail,
+      From : "freshschoolsb2@gmail.com",
+      Subject : "Successfully Registored",
+      Body : "We accpect your registion form"
+  })
 }

@@ -23,8 +23,8 @@ function login (){
     const adminExist = userCheck(mail,password);
     console.log(adminExist);
     if (adminExist){
-        alert("logged in succesfully");
-        window.location.href='../../pages/add.html';
+        // alert("logged in succesfully");
+        window.location.href='../../pages/admin.html    ';
         // let output1 = `<p style="color: red;"> logged in succesfully </p>`;
         // document.getElementById("alert").innerHTML = output1
     }

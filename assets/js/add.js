@@ -23,7 +23,6 @@ for (let i = 0; i < allForms.length; i++) {
 document.getElementById("output").innerHTML = fullName;
 function update(even) {
     let result = even.target.value;
-
     allForms[even.target.dataset.index].status = result;
     localStorage.setItem("All_form", JSON.stringify(allForms));
 }

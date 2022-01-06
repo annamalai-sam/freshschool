@@ -2,15 +2,14 @@ let allQuestions = JSON.parse(localStorage.getItem("allQuestions"));
 let fullQuestions = "";
 for (let i = 0; i < allQuestions.length ; i++) {
   const each = allQuestions[i];
-  let oneQuestion = `<div  style="display:flex;">
-  <div class="contant">
-  <P class="asker" id="mail"> ${each.mail} </P> 
+  let oneQuestion = `<div  style="display:flex;">  <div class="contant">
+  <P class="asker" id="mail_${i}"> ${each.mail} </P> 
   <p class="asked"> ${each.question} </p>
   </div> 
   <div class="contant">
-  <form onsubmit="">
-  <textarea  id="ques" class="ans" cols="30" rows="10" minlength="10" placeholder="Answer please...." required></textarea>
-  <button class="btn"> Submit </button>
+  <form>
+  <textarea  id="${i}" class="ans" cols="30" rows="10" minlength="10" placeholder="Answer please...." required></textarea>
+  <button class="btn" data-index="${i}"  data-ques="${each.question}" data-mail="${each.mail}" onclick="answer(event);"> Submit </button>
   <br> <br>
   </form>
   </div>
@@ -18,4 +17,27 @@ for (let i = 0; i < allQuestions.length ; i++) {
   fullQuestions = fullQuestions + oneQuestion;
 document.getElementById("output").innerHTML = fullQuestions;
 }
-             
+
+function answer(even){
+  event.preventDefault();
+  let indexValue = even.target.dataset.index;
+  let ans = document.getElementById(indexValue).value;
+  let userMail = even.target.dataset.mail;
+  let userQues = even.target.dataset.ques;
+  console.log(ans);
+  console.log(userQues);
+  console.log(userMail);
+  sendMail(userMail,userQues,ans); 
+}
+
+function sendMail(user_mail,user_ques,answer){
+  Email.send({
+    Host : "smtp.gmail.com",
+    Username : "freshschoolsb2@gmail.com",
+    Password : "chitra@B2",
+    To : user_mail,
+    From : "freshschoolsb2@gmail.com",
+    Subject : user_ques,
+    Body : answer
+})
+} 

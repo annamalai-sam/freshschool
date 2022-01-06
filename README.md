@@ -8,7 +8,7 @@
   Mail and passwords are in admin-login.js page
 
 3.Add status
-   Admin wants modify the result of the students 
+   Admin wants modify the result of the students from current result
 
 4.Show status 
   User must enter mail 
@@ -16,5 +16,5 @@
   if mail not exist alert Mail does not Exist
 
 5.FAQ 
-     currently working
+     currently working 
 

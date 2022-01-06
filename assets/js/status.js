@@ -26,3 +26,5 @@ function output (mail){
     }
     return exist;
 }
+
+
