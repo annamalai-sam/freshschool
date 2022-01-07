@@ -17,7 +17,6 @@ for (let i = 0; i < allQuestions.length ; i++) {
   fullQuestions = fullQuestions + oneQuestion;
 document.getElementById("output").innerHTML = fullQuestions;
 }
-
 function answer(even){
   event.preventDefault();
   let indexValue = even.target.dataset.index;
@@ -28,8 +27,8 @@ function answer(even){
   console.log(userQues);
   console.log(userMail);
   sendMail(userMail,userQues,ans); 
+  console.log("value function");
 }
-
 function sendMail(user_mail,user_ques,answer){
   Email.send({
     Host : "smtp.gmail.com",
@@ -40,4 +39,5 @@ function sendMail(user_mail,user_ques,answer){
     Subject : user_ques,
     Body : answer
 })
+console.log("mail function");
 } 
