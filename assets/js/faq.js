@@ -10,8 +10,8 @@ function pre_data() {
 }
 pre_data();
 
-function addQueries(){
-    event.preventDefault();
+function addQueries(even){
+    even.preventDefault();
     let queries = {
     question : document.getElementById("query").value,
     mail : document.getElementById("mail").value

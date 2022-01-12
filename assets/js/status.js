@@ -1,5 +1,5 @@
-function checkResult(){
-    event.preventDefault();
+function checkResult(even){
+    even.preventDefault();
     let mail = document.getElementById("res_mail").value;
     let mailExist = output(mail); 
     if(mailExist){

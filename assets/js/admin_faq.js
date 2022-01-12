@@ -18,7 +18,7 @@ for (let i = 0; i < allQuestions.length ; i++) {
 document.getElementById("output").innerHTML = fullQuestions;
 }
 function answer(even){
-  event.preventDefault();
+  even.preventDefault();
   let indexValue = even.target.dataset.index;
   let ans = document.getElementById(indexValue).value;
   let userMail = even.target.dataset.mail;

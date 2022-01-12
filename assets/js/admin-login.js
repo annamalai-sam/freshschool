@@ -15,8 +15,8 @@ let all_adm = [
 localStorage.setItem("allAdmin", JSON.stringify(all_adm));
 
 let all_admin = JSON.parse(localStorage.getItem("allAdmin"));
-function login (){
-    event.preventDefault();
+function login (even){
+    even.preventDefault();
     let mail = document.getElementById("inputMail").value;
     let password = document.getElementById("inputPassword").value;
     console.log(mail,password);
