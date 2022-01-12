@@ -10,8 +10,8 @@ function pre_data() {
 }
 pre_data();
 
-function loginAlert() {
-  event.preventDefault();
+function loginAlert(even) {
+  even.preventDefault();
   let firstname = document.getElementById("firstname").value;
   let lastname = document.getElementById("lastname").value;
   let email = document.getElementById("email").value;
