@@ -29,15 +29,15 @@ function answer(even){
   sendMail(userMail,userQues,ans); 
   console.log("value function");
 }
-function sendMail(user_mail,user_ques,answer){
+function sendMail(user_mail,user_ques,Answer){
   Email.send({
     Host : "smtp.gmail.com",
-    Username : "freshschoolsb2@gmail.com",
+    Username : "freshschool2022@gmail.com",
     Password : "chitra@B2",
     To : user_mail,
     From : "freshschoolsb2@gmail.com",
     Subject : user_ques,
-    Body : answer
+    Body : Answer
 })
-console.log("mail function");
+console.log(answer);
 } 

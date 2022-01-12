@@ -49,7 +49,6 @@ function loginAlert() {
     localStorage.setItem("All_form", JSON.stringify(allfrm));
     document.getElementById("output").innerHTML = `<h1 class="notice"> Successfully Registored </h1>`;
     sendMail(email);
-    // alert("Successfully Registored");
 
   }
 }
