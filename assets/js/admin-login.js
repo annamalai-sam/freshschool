@@ -33,7 +33,7 @@ function login (){
 }
     function userCheck(paramail,parapass){
         let adminhere = false;
-        for (let i = 0; i < all_admin.length; i++){
+        for (let i of all_admin){
             const user = all_admin[i];
             const gmail = user.ad_mail;
             const pass = user.ad_pass;
