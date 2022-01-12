@@ -50,3 +50,6 @@ ul li:hover ul li{
 pre {
     font-size : 20px;
 }
+.center{
+    text-align: center;
+}

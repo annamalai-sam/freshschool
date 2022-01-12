@@ -46,3 +46,6 @@ display: none;
 ul li:hover ul li{
 display: block;
 }
+.cen{
+    text-align: center;
+}
