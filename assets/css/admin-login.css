@@ -51,18 +51,18 @@ ul li:hover ul li{
     position: relative;
     padding: 20px;
     font-size: x-large;
-   
+    text-align: center;
 }
 .formbox {
     height: 490px;
     width: 600px;
     border-radius: 20px;
     background-color :white;
-    opacity: 50%;
-    position: relative;
-    left: 32%;
     padding: 20px;
-    
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
 }
 .input{
     height: 30px; width: 250px;
