@@ -28,6 +28,3 @@
 6.FAQ admin answer 
        Admin should enter the answer to user 
        and then the directly sended to user mail 
-
-
-           
