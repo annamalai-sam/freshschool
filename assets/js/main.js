@@ -56,7 +56,7 @@ function emailValid(current_email) {
   
   let isUsed = false;
 
-  for (let i = 0; i < allfrm.length; i++) {
+  for (let i of allfrm) {
     const user = allfrm[i];
     const gmail = user.Email;
     if (current_email == gmail) {

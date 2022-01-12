@@ -1,9 +1,9 @@
 let allForms = JSON.parse(localStorage.getItem("All_form"));
 let fullName = "";
-for (let i = 0; i < allForms.length; i++) {
+for (let i of allForms) {
   const user = allForms[i];
   let Name = ` <table class="table"> <tr> <th> Name </th>
-                <td> ${user.First_Name+`&nbsp;`+user.Last_name} </td> </tr>
+                <td> ${user.First_Name}  ${user.Last_name} </td> </tr>
                 <tr> <th> Date Of Birth </th> <td> ${user.DOB} </td> </tr>
                 <tr> <th> Father's Name </th> <td> ${user.Par_name} </td> </tr>
                 <tr> <th> Email </th> <td> ${user.Email} </td> </tr>
