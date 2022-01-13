@@ -9,6 +9,7 @@ body{
 }
 .navBar{
     margin-left: 15%;
+    position: fixed;
 }
 ul{
     list-style: none;
@@ -70,4 +71,9 @@ ul li:hover ul li{
 .btn:hover{
     color: rgb(238, 243, 243);
     background-color: black;
+}
+.title{
+    margin-left: 15%;
+    font-size: 660%;
+    color: #669db3ff;
 }

@@ -9,6 +9,7 @@ body{
 }
 .navBar{
     margin-left: 15%;
+    position: fixed;
 }
 ul{
     list-style: none;
@@ -42,7 +43,7 @@ ul li:hover ul li{
 }
 .list{
     font-size:  150%;
-    margin-left: 5%;
+    margin-left: 15%;
 }
 .ques{
     font-size:  150%;
@@ -62,4 +63,23 @@ ul li:hover ul li{
 }
 h1{
     text-align: center;
+}
+.title{
+    margin-left: 15%;
+    font-size: 660%;
+    color: #669db3ff;
+}
+.video{
+    height : 80vh;
+    width : 75%;
+    display: flex;
+    margin: auto;
+    border-radius: 5px;
+    border:none;
+}
+.main{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    border-radius: 10px;
 }

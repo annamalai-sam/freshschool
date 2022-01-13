@@ -9,6 +9,7 @@ body{
 }
 .navBar{
         margin-left: 15%;
+    position: fixed;
 }
 ul{
         list-style: none;
@@ -85,12 +86,13 @@ ul li:hover ul li{
         color:black;
         font-size: 200%;
 }
-.G{
-        width:60%;
+.adv{
+        width:90%;
+        height:90%;
         border-radius: 10px;
-        height:60%;
-        margin-left: 1.5%;
-        display: inline-block;
+        margin:auto;
+        justify-content: center;
+        display: flex;
 }
 .list{
         color:rgb(44, 44, 44);
@@ -100,7 +102,7 @@ ul li:hover ul li{
 }
 .even{
         color:rgb(44, 44, 44);
-        font-size: 150%;
+        font-size: 200%;
         text-align: center;
 }
 .evenImg{
@@ -135,6 +137,7 @@ ul li:hover ul li{
         background-color: rgb(238, 243, 243);
         color: black;
 }
+
 
 
 

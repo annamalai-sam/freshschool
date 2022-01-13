@@ -10,6 +10,7 @@ body{
 }
 .navBar{
     margin-left: 15%;
+    position: fixed;
 }
 ul{
     list-style: none;
@@ -76,4 +77,9 @@ ul li:hover ul li{
     .center{
         text-align: center;
         font-size: 30px;
+    }
+    .title{
+        margin-left: 15%;
+        font-size: 660%;
+        color: #669db3ff;
     }

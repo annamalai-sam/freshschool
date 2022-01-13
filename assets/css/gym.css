@@ -9,6 +9,7 @@ body{
 }
 .navBar{
     margin-left: 15%;
+    position: fixed;
 }
 ul{
     list-style: none;
@@ -80,3 +81,8 @@ ul li:hover ul li{
      margin-right: auto;
      display: block;
  }
+ .title{
+    margin-left: 15%;
+    font-size: 660%;
+    color: #669db3ff;
+}

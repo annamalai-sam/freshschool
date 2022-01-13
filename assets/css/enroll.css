@@ -9,6 +9,7 @@ body{
 }
 .navBar{
     margin-left: 15%;
+    position: fixed;
 }
 ul{
     list-style: none;
@@ -63,15 +64,13 @@ td{
 }
 input{
     height: 40px; 
-    width: 300px;
-    opacity: 80%; 
+    width: 300px; 
     border-radius: 10px; 
     border: none;
 }
 textarea{
     border: none; 
-    border-radius: 20px;
-    opacity: 80%; 
+    border-radius: 20px; 
     padding: 10px;
 }
 .enrolbtn {
@@ -79,7 +78,6 @@ textarea{
     width: 120px;
     background-color: black; 
     color: white; 
-    opacity: 70%;
     font-size: large; 
     border-radius: 20px;
     border: none;    
@@ -102,7 +100,6 @@ textarea{
     padding: 10px;
     color: white;
     background-color: black;
-    opacity: 80%;
     height: auto;
     width: 700px;
     font-size: x-large;
@@ -113,7 +110,6 @@ textarea{
     padding: 10px;
     color: white;
     background-color: black;
-    opacity: 80%;
     height: auto;
     width: 620px;
     border-radius: 20px;
@@ -127,7 +123,6 @@ textarea{
     margin-top: 60px;
     color: white;
     background-color: #000;
-    opacity: 80%;
     height: auto;
     width: 715px;
     border-radius: 20px;
@@ -147,4 +142,9 @@ textarea{
     text-align: center;
     color: red;
     font-size: 100px;
+}
+.title{
+    margin-left: 5%;
+    font-size: 660%;
+    color: #669db3ff;
 }

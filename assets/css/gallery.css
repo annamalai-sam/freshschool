@@ -9,6 +9,7 @@ body{
 }
 .navBar{
     margin-left: 15%;
+    position: fixed;
 }
 ul{
     list-style: none;
@@ -52,4 +53,9 @@ pre {
 }
 .center{
     text-align: center;
+}
+.title{
+    margin-left: 15%;
+    font-size: 660%;
+    color: #669db3ff;
 }

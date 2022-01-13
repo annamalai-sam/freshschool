@@ -43,7 +43,7 @@ ul li:hover ul li{
     display: block;
 }
 .title{
-    margin-left: 20%;
+    margin-left: 15%;
     font-size: 660%;
     color: #669db3ff;
 }
@@ -84,4 +84,9 @@ ul li:hover ul li{
 .id{
     color: black;
     font-size: 160%;
+}
+.title{
+    margin-left: 15%;
+    font-size: 660%;
+    color: #669db3ff;
 }

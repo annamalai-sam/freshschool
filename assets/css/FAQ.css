@@ -44,17 +44,11 @@ ul li:hover ul li{
 }
 .section{
     width: 60%;
-    height: 60vh;
+    height: 75vh;
     border-radius: 10px;
     background-color:#669db3ff;
     margin-left: 5%;
     display: inline-block;
-}
-.inputQuestion{
-    /* display: inline-flex; */
-    margin-left: 3%;
-    background-color: red;
-    border-radius: 20px;
 }
 .title{
     color: aliceblue;
@@ -92,7 +86,6 @@ ul li:hover ul li{
     background-color: aliceblue;
     position: absolute;
     left: 0;
-
 }
 .ans p{
     font-size: 120%;
@@ -102,7 +95,6 @@ ul li:hover ul li{
 .contant-item:target .ans{
     max-height: 100px;
 }
-
 .tit{
     color:#669db3ff;
     font-size: 600%;
@@ -113,6 +105,7 @@ ul li:hover ul li{
 .input{
     margin-left: 3%;
     width: 35%;
+    height: 60vh;
     margin-right: 3%;
     border-radius: 10px;
     padding-left: 2%;
