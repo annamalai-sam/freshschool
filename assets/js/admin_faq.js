@@ -23,12 +23,9 @@ function answer(even){
   let ans = document.getElementById(indexValue).value;
   let userMail = even.target.dataset.mail;
   let userQues = even.target.dataset.ques;
-  console.log(ans);
-  console.log(userQues);
-  console.log(userMail);
   sendMail(userMail,userQues,ans); 
-  console.log("value function");
 }
+
 function sendMail(user_mail,user_ques,Answer){
   Email.send({
     Host : "smtp.gmail.com",

@@ -62,6 +62,16 @@ th{
 select option{
      text-align: center; 
 }
+.btn{
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-left: 10%;
+}
+.btn:hover{
+    color:black;
+    background-color: aliceblue;
+}
 /* <tr>   
 <th> Name </th>
 <td id="name">  </td>
