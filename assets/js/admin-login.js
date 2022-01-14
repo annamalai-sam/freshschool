@@ -1,15 +1,15 @@
 let all_adm = [
     {
         "ad_mail":"chitra.muthukumaran@freshworks.com",  
-        "ad_pass":"FWE1019C",
+        "ad_pass":"CM1019",
     },
     {
       "ad_mail":"prasannabharati.ram@freshworks.com",  
-      "ad_pass":"FWE1457C",
+      "ad_pass":"PR1457",
     },
     {
         "ad_mail":"shanmuga.anandaraman@freshworks.com",  
-        "ad_pass":"FWE0580C",
+        "ad_pass":"SA0580",
     },
 ]
 localStorage.setItem("allAdmin", JSON.stringify(all_adm));
