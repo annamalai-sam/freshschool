@@ -14,7 +14,7 @@ let all_adm = [
 ]
 localStorage.setItem("allAdmin", JSON.stringify(all_adm));
 
-let all_admin = JSON.parse(localStorage.getItem("allAdmin"));
+let allAdmin = JSON.parse(localStorage.getItem("allAdmin"));
 function login (even){
     even.preventDefault();
     let mail = document.getElementById("inputMail").value;
@@ -32,11 +32,12 @@ function login (even){
     }
 }
     function userCheck(paramail,parapass){
+        console.log(paramail,parapass);
         let adminhere = false;
-        for (let i of all_admin){
-            const user = all_admin[i];
-            const gmail = user.ad_mail;
-            const pass = user.ad_pass;
+        for (let i of allAdmin){
+            const pass = i.ad_pass;
+            const gmail = i.ad_mail;
+            console.log(pass,gmail);
             if (paramail==gmail && parapass==pass){
                 adminhere = true;
                 break;

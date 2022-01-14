@@ -48,7 +48,9 @@ function loginAlert(even) {
     console.log(allfrm);
     localStorage.setItem("All_form", JSON.stringify(allfrm));
     document.getElementById("output").innerHTML = `<h1 class="notice"> Successfully Registored </h1>`;
-    sendMail(email);
+    alert("Successfully Registored");
+    let Email = "We accpect your registoration"
+    sendMail(Email);
 
   }
 }
@@ -57,8 +59,7 @@ function emailValid(current_email) {
   let isUsed = false;
 
   for (let i of allfrm) {
-    const user = allfrm[i];
-    const gmail = user.Email;
+    const gmail = i.Email;
     if (current_email == gmail) {
       isUsed = true;
       break;
@@ -75,7 +76,7 @@ function sendMail(mail){
       Username : "freshschoolsb2@gmail.com",
       Password : "chitra@B2",
       To : mail,
-      From : "freshschoolsb2@gmail.com",
+      From : "freshschool2022@gmail.com",
       Subject : "Successfully Registored",
       Body : "We accpect your registion form"
   })

@@ -18,4 +18,5 @@ function addQueries(even){
     }
     allQueries.push(queries);
     localStorage.setItem("allQuestions", JSON.stringify(allQueries));
+    alert("We will answer you soon and Please check your registered email (spam/promotions folder as well) for updates from us.");
 }
