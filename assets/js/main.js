@@ -49,9 +49,6 @@ function loginAlert(even) {
     localStorage.setItem("All_form", JSON.stringify(allfrm));
     document.getElementById("output").innerHTML = `<h1 class="notice"> Successfully Registored </h1>`;
     alert("Successfully Registored and Please check your registered email (spam/promotions folder as well) for updates from us.");
-    let Email = "We accpect your registoration"
-    sendMail(Email);
-
   }
 }
 function emailValid(current_email) {
@@ -66,18 +63,4 @@ function emailValid(current_email) {
     }
   }
   return isUsed;
-}
-
-
-function sendMail(mail){
-  console.log(mail);
-  Email.send({
-      Host : "smtp.gmail.com",
-      Username : "freshschoolsb2@gmail.com",
-      Password : "chitra@B2",
-      To : mail,
-      From : "freshschool2022@gmail.com",
-      Subject : "Successfully Registored for Freshschool admission",
-      Body : "We accpect your registion form"
-  })
 }
