@@ -45,3 +45,13 @@ function login (even){
         }
         return adminhere;
     }
+
+    function show_pass() {
+        let checkBox = document.getElementById("showpass");
+        if (checkBox.checked) {
+          document.getElementById("inputPassword").type = "text";
+        }
+        else {
+          document.getElementById("inputPassword").type = "password";
+        }
+      }
