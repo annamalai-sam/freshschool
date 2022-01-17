@@ -93,7 +93,7 @@ ul li:hover ul li{
     margin-left: 1px;
     padding: 3%;
 }
-.contant-item:target .ans{
+:target{
     max-height: 100px;
 }
 .tit{
