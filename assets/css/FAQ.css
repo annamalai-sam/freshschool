@@ -45,7 +45,7 @@ ul li:hover ul li{
 .section{
     width: 60%;
     height: 75vh;
-    border-radius: 10px;
+    border-radius: 2px;
     background-color:#669db3ff;
     margin-left: 5%;
     display: inline-block;
@@ -62,7 +62,7 @@ ul li:hover ul li{
 }
 .contant-item{
     color:black;
-    border-radius: 10px;
+    border-radius: 3px;
     background-color: aliceblue;
     margin-bottom: 10px;
     padding: 5px;
@@ -108,13 +108,13 @@ ul li:hover ul li{
     width: 35%;
     height: 72vh;
     margin-right: 3%;
-    border-radius: 10px;
+    border-radius: 2px;
     padding-left: 2%;
     padding-right: 2%;
     background-color: #669db3ff;
 }
 .query{
-    border-radius: 7px;
+    border-radius: 3px;
     width: 100%;
     margin: auto;
     margin-top: 10%;
@@ -126,7 +126,7 @@ ul li:hover ul li{
     box-shadow: 0px 0px 40px; 
 }
 .mail{
-    border-radius: 7px;
+    border-radius: 3px;
     width: 100%;
     margin: auto;
     border: none; 
@@ -141,7 +141,7 @@ ul li:hover ul li{
     background-color:whitesmoke;
     height: 55%;
     width: 30%;
-    border-radius: 7px;
+    border-radius: 3px;
     font-size: 120%;
     border: none;
     color: black;
@@ -156,3 +156,13 @@ ul li:hover ul li{
     color:whitesmoke;
     
 }
+
+
+
+
+/* <div class="contant-item">
+<a class="contant-link" href="#sample3"> sdfghjkl </a>
+<div class="ans" id="sample3">
+  <p> asdfghjkl; </p>
+</div>
+</div> */
