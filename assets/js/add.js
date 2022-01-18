@@ -24,14 +24,13 @@ document.getElementById("output").innerHTML = fullName;
 function update(even){
     let result = even.target.value;
     let user_mail = allForms[even.target.dataset.index].Email;
-    let status_value = allForms[even.target.dataset.index].status;
     let name = allForms[even.target.dataset.index].First_Name+" "+allForms[even.target.dataset.index].Last_name;
     console.log(name);
     console.log(user_mail);
-    status_value = result;
-    console.log(status_value);
+    allForms[even.target.dataset.index].status = result;
+    console.log(result);
     localStorage.setItem("All_form", JSON.stringify(allForms));
-    let send = `<button data-mail="${user_mail}" data-name = "${name}" data-addstauts="${status_value}" onclick="sendMail(event)" class="btn">Send mail</button>`;
+    let send = `<button data-mail="${user_mail}" data-name = "${name}" data-addstauts="${result}" onclick="sendMail(event)" class="btn">Send mail</button>`;
     document.getElementById("mail").innerHTML = send;
 }
 function sendMail(even) {
