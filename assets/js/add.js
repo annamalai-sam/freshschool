@@ -47,5 +47,7 @@ Email.send({
   From : "freshschoolsb2@gmail.com",
   Subject : "Result from Freshschool",
   Body : contant
-})  
+}).then(
+  message => alert(message)
+);
 } 

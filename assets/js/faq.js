@@ -38,7 +38,7 @@ function addQueries(even){
                  <p> ${anes} </p>
                  </div>
                  </div>`;
-  output = output + out;
+    output = output + out;
   }
 document.getElementById("output").innerHTML = output;
 

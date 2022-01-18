@@ -9,9 +9,10 @@ for (let i = 0; i < allQuestions.length ; i++) {
   <div class="contant">
   <form>
   <textarea  id="${i}" class="ans" cols="30" rows="10" minlength="10" placeholder="Answer please...." required></textarea>
+ <button class="btn" data-index="${i}"  data-ques="${each.question}" data-mail="${each.mail}" onclick="answer(event);"> Submit </button>
+ <br><br>
  <button class="btn" data-index="${i}"  data-ques="${each.question}" onclick="addingFAQ(event);"> Add to FAQ </button>
-   <br>
-  <br> <br>
+ <br>
   </form>
   </div>
   </div>`; 
@@ -32,36 +33,28 @@ let allfaq = [];
    localStorage.setItem("FAQ",JSON.stringify(allfaq));
  }
 
+ function answer(even){
+  even.preventDefault();
+  let indexValue = even.target.dataset.index;
+  let ans = document.getElementById(indexValue).value;
+  let userMail = even.target.dataset.mail;
+  let userQues = even.target.dataset.ques;
+  console.log(ans);
+  console.log(indexValue);
+  console.log(userMail);
+  console.log(userQues);
 
+  Email.send({
+    Host : "smtp.gmail.com",
+    Username : "freshschoolsb2@gmail.com",
+    Password : "chitra@B2",
+    To : userMail,
+    From : "freshschoolsb2@gmail.com",
+    Subject : userQues+"- Freshschools",
+    Body : ans
+}).then(
+  message => alert(message)
+);
 
-
-
-
-
-
- // function answer(even){
-//   even.preventDefault();
-//   let indexValue = even.target.dataset.index;
-//   let ans = document.getElementById(indexValue).value;
-//   let userMail = even.target.dataset.mail;
-//   let userQues = even.target.dataset.ques;
-//   console.log(ans);
-//   console.log(indexValue);
-//   console.log(userMail);
-//   console.log(userQues);
-
-//   Email.send({
-//     Host : "smtp.gmail.com",
-//     Username : "freshschool2022@gmail.com",
-//     Password : "chitra@B2",
-//     To : userMail,
-//     From : "freshschoolsb2@gmail.com",
-//     Subject : userQues,
-//     Body : ans
-//   })  
-
-// console.log("sended");
-// console.log(Email.send);
-// }
-//  <button class="btn" data-index="${i}"  data-ques="${each.question}" data-mail="${each.mail}" onclick="answer(event);"> Submit </button>
+}
 
