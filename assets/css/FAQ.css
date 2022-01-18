@@ -44,7 +44,7 @@ ul li:hover ul li{
 }
 .section{
     width: 60%;
-    height: 75vh;
+    height: auto;
     border-radius: 2px;
     background-color:#669db3ff;
     margin-left: 5%;
