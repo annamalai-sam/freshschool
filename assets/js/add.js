@@ -29,9 +29,9 @@ function update(even){
     console.log(user_mail);
     allForms[even.target.dataset.index].status = result;
     console.log(result);
-    localStorage.setItem("All_form", JSON.stringify(allForms));
     let send = `<button data-mail="${user_mail}" data-name = "${name}" data-addstauts="${result}" onclick="sendMail(event)" class="btn">Send mail</button>`;
     document.getElementById("mail").innerHTML = send;
+    localStorage.setItem("All_form", JSON.stringify(allForms));
 }
 function sendMail(even) {
 let to = even.target.dataset.mail;
