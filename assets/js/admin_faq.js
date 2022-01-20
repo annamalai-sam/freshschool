@@ -33,28 +33,4 @@ let allfaq = [];
    localStorage.setItem("FAQ",JSON.stringify(allfaq));
  }
 
- function answer(even){
-  even.preventDefault();
-  let indexValue = even.target.dataset.index;
-  let ans = document.getElementById(indexValue).value;
-  let userMail = even.target.dataset.mail;
-  let userQues = even.target.dataset.ques;
-  console.log(ans);
-  console.log(indexValue);
-  console.log(userMail);
-  console.log(userQues);
-
-  Email.send({
-    Host : "smtp.gmail.com",
-    Username : "freshschoolsb2@gmail.com",
-    Password : "chitra@B2",
-    To : userMail,
-    From : "freshschoolsb2@gmail.com",
-    Subject : userQues+"- Freshschools",
-    Body : ans
-}).then(
-  message => alert(message)
-);
-
-}
 
