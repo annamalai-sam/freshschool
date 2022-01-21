@@ -16,6 +16,7 @@ function addQueries(even){
     even.preventDefault();
     let queries = {
     question : document.getElementById("query").value,
+    Name : document.getElementById("name").value,
     mail : document.getElementById("mail").value
     }
     allQueries.push(queries);

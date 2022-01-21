@@ -1,6 +1,6 @@
 let allForms = JSON.parse(localStorage.getItem("All_form"));
 let fullName = "";
-for (let i = 0; i < allForms.length; i++) { 
+for (let i = 0; i < allForms.length; i++) {
   let user = allForms[i];
   let Name = ` <table class="table"> <tr> <th> Name </th>
                 <td> ${user.First_Name}  ${user.Last_name} </td> </tr>
@@ -10,43 +10,54 @@ for (let i = 0; i < allForms.length; i++) {
                 <form>
                 <tr> <th> <label for="checkBox_${i}"> Result </label> </th> 
                 <td>              
-                <select id="checkBox_${i}" data-index="${i}" data-status="${user.status}" data-gmail="${user.Email}" onchange="update(event)">
+                <select id="checkBox_${i}" data-index="${i}" onchange="update(event)">
                 <option selected disable> ${user.status} </option>
                 <option>Selected</option>
                 <option>Waiting list</option>
                 <option>Not selected</option>
                 </select>
-                </form> <span id="mail">  </span>
+                </form> <span id="mail_${i}">  </span>
                 </td> </tr> </table>`;
   fullName = fullName + Name;
 }
 document.getElementById("output").innerHTML = fullName;
-function update(even){
-    let result = even.target.value;
-    let user_mail = allForms[even.target.dataset.index].Email;
-    let name = allForms[even.target.dataset.index].First_Name+" "+allForms[even.target.dataset.index].Last_name;
-    console.log(name);
-    console.log(user_mail);
-    allForms[even.target.dataset.index].status = result;
-    console.log(result);
-    let send = `<button data-mail="${user_mail}" data-name = "${name}" data-addstauts="${result}" onclick="sendMail(event)" class="btn">Send mail</button>`;
-    document.getElementById("mail").innerHTML = send;
-    localStorage.setItem("All_form", JSON.stringify(allForms));
+function update(even) {
+  let result = even.target.value;
+  let indx = even.target.dataset.index;
+  console.log(indx);
+  console.log(result);
+  let send = `<button  data-addstauts="${result}" data-index="${indx}" onclick="sendMail(event)" class="btn">Send mail</button>`;
+  document.getElementById(`mail_${indx}`).innerHTML = send;
+  localStorage.setItem("All_form", JSON.stringify(allForms));
 }
 function sendMail(even) {
-let to = even.target.dataset.mail;
-let state = even.target.dataset.addstauts;
-let name = even.target.dataset.name;
-let contant = `${name} you will be ${state}  for Freshschool for in this year`;
-Email.send({
-  Host : "smtp.gmail.com",
-  Username : "freshschool2022@gmail.com",
-  Password : "chitra@B2",
-  To : to,
-  From : "freshschoolsb2@gmail.com",
-  Subject : "Result from Freshschool",
-  Body : contant
-}).then(
-  message => alert(message)
-);
-} 
+  let index = even.target.dataset.index;
+  let obj = allForms[index];
+  let Result = even.target.dataset.addstauts;
+  console.log(Result);
+  console.log(obj.Email);
+  let contant = `${obj.First_Name+obj.Last_name} you will be ${Result}  for Freshschool in this year`;
+ 
+  
+  const emailBody = {
+    to_email: obj.Email, // replace it with the receiver's email address
+    to_name: obj.First_Name+obj.Last_name, // replace it with the receiver's name
+    message: contant,
+  };
+  console.log(emailBody);
+  sendEmailNotification(emailBody);
+}
+
+function sendEmailNotification(body) {
+  emailjs.send("service_1fhzihk", "template_lu9b6ct", body).then(
+    function (response) {
+      console.log("SUCCESS!", response.status, response.text);
+      // TODO: to do after Email is sent SUCCESSFULLY  //
+    },
+    function (error) {
+      console.log("FAILED...", error);
+      // TODO: to do if sending Email was UNSUCCESSFUL  //
+    }
+  );
+}
+
