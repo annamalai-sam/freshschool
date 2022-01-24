@@ -19,7 +19,7 @@ for (let i = 0; i < allQuestions.length ; i++) {
   </div>
   </div>`; 
   fullQuestions = fullQuestions + oneQuestion;
-document.getElementById("output").innerHTML = fullQuestions;
+document.getElementById("question_box").innerHTML = fullQuestions;
 }
 let allfaq = [];
 function addingFAQ(even){
