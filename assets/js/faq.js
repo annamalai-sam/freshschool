@@ -31,7 +31,7 @@ function addQueries(even){
     let anes = one.answer;
     console.log(ques);
     console.log(anes);
-    let out = `  <div class="contant-item">
+    let out = ` <div class="contant-item">
                  <a class="contant-link" href="#question${i}"> ${ques} </a>
                  <div class="ans" id="question${i}">
                  <p> ${anes} </p>
@@ -39,7 +39,7 @@ function addQueries(even){
                  </div>`;
     output = output + out;
   }
-document.getElementById("output").innerHTML = output;
+document.getElementById("FAQ").innerHTML = output;
 
 
 
