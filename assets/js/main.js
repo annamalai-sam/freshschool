@@ -47,7 +47,6 @@ function loginAlert(even) {
     allfrm.push(form);
     console.log(allfrm);
     localStorage.setItem("STUDENT_FORMLIST", JSON.stringify(allfrm));
-    document.getElementById("output").innerHTML = `<h1 class="notice"> Successfully Registored </h1>`;
     alert("Successfully Registored and Please check your registered email (spam/promotions folder as well) for updates from us.");
   }
 }

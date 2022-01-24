@@ -20,7 +20,7 @@ for (let i = 0; i < allForms.length; i++) {
                 </td> </tr> </table>`;
   fullName = fullName + Name;
 }
-document.getElementById("output").innerHTML = fullName;
+document.getElementById("main_table").innerHTML = fullName;
 function update(even) {
   let result = even.target.value;
   let indx = even.target.dataset.index;
