@@ -1,5 +1,6 @@
 let allQuestions = JSON.parse(localStorage.getItem("USER_QUERY_LIST"));
 let fullQuestions = "";
+console.log(allQuestions);
 for (let i = 0; i < allQuestions.length ; i++) {
   const each = allQuestions[i];
   let oneQuestion = `<div  style="display:flex;">  <div class="contant">

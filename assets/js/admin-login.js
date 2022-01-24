@@ -12,9 +12,9 @@ let all_adm = [
         "ad_pass":"SA0580",
     },
 ]
-localStorage.setItem("allAdmin", JSON.stringify(all_adm));
+localStorage.setItem("ALL_ADMINS", JSON.stringify(all_adm));
 
-let allAdmin = JSON.parse(localStorage.getItem("allAdmin"));
+let allAdmin = JSON.parse(localStorage.getItem("ALL_ADMINS"));
 function login (even){
     even.preventDefault();
     let mail = document.getElementById("inputMail").value;
