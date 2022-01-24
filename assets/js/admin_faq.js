@@ -44,14 +44,17 @@ function answer(even){
   let question = arrayObject.question;
   console.log(question);
   console.log(answer);
-  let contant = `${question}${answer}`;
+  let contant = `
+  ${question}       
+  ${answer}
+  `;
   const emailBody = {
   to_email: arrayObject.mail, // replace it with the receiver's email address
   to_name: arrayObject.Name, // replace it with the receiver's name
   message: contant,
 };
 console.log(emailBody);
-// sendEmailNotification(emailBody);
+sendEmailNotification(emailBody);
 }
 
   function sendEmailNotification(body) {

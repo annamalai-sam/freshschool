@@ -37,7 +37,6 @@ function sendMail(even) {
   console.log(Result);
   console.log(obj.Email);
   let contant = `${obj.First_Name+obj.Last_name} you will be ${Result}  for Freshschool in this year`;
- 
   
   const emailBody = {
     to_email: obj.Email, // replace it with the receiver's email address

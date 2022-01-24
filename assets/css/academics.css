@@ -27,6 +27,7 @@ ul li{
 }
 ul li a {
     text-decoration: none;
+    transition: 2s;
     color: black;
     text-shadow: black 0px 0px 1px;
     display: block;
