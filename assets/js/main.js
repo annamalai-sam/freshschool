@@ -1,7 +1,7 @@
 let allfrm = [];
 
 function pre_data() {
-  let application = JSON.parse(localStorage.getItem("All_form"));
+  let application = JSON.parse(localStorage.getItem("STUDENT_FORMLIST"));
   if (application == null) {
     allfrm = [];
   } else {
@@ -46,7 +46,7 @@ function loginAlert(even) {
     console.log(form);
     allfrm.push(form);
     console.log(allfrm);
-    localStorage.setItem("All_form", JSON.stringify(allfrm));
+    localStorage.setItem("STUDENT_FORMLIST", JSON.stringify(allfrm));
     document.getElementById("output").innerHTML = `<h1 class="notice"> Successfully Registored </h1>`;
     alert("Successfully Registored and Please check your registered email (spam/promotions folder as well) for updates from us.");
   }

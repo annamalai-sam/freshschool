@@ -8,7 +8,7 @@ function checkResult(even){
 }
 function output (mail){
     let exist = true;
-    let apply_status = JSON.parse(localStorage.getItem("All_form"));
+    let apply_status = JSON.parse(localStorage.getItem("STUDENT_FORMLIST"));
     for (let i of apply_status) {
         const gmail = i.Email;
         if (mail == gmail){

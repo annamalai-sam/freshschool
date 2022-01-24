@@ -1,4 +1,4 @@
-let allForms = JSON.parse(localStorage.getItem("All_form"));
+let allForms = JSON.parse(localStorage.getItem("STUDENT_FORMLIST"));
 let fullName = "";
 for (let i = 0; i < allForms.length; i++) {
   let user = allForms[i];
