@@ -1,3 +1,4 @@
+function onPageLode(){
 let allForms = JSON.parse(localStorage.getItem("STUDENT_FORMLIST"));
 let fullName = "";
 for (let i = 0; i < allForms.length; i++) {
@@ -21,6 +22,8 @@ for (let i = 0; i < allForms.length; i++) {
   fullName = fullName + Name;
 }
 document.getElementById("main_table").innerHTML = fullName;
+}
+onPageLode();
 function update(even) {
   let result = even.target.value;
   let indx = even.target.dataset.index;
@@ -60,3 +63,11 @@ function sendEmailNotification(body) {
   );
 }
 
+
+
+
+
+
+// for (const [i, v] of ['a', 'b', 'c'].entries()) {
+//   console.log(i, v)
+// }

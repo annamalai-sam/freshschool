@@ -1,24 +1,25 @@
-let all_adm = [
+function onPageLode(){
+let admins = [
     {
-        "ad_mail":"chitra.muthukumaran@freshworks.com",  
-        "ad_pass":"CM1019",
+        "mail":"chitra.muthukumaran@freshworks.com",  
+        "password":"CM1019",
     },
     {
-      "ad_mail":"prasannabharati.ram@freshworks.com",  
-      "ad_pass":"PR1457",
+        "mail":"shanmuga.anandaraman@freshworks.com",  
+        "password":"SA0580",
     },
     {
-        "ad_mail":"shanmuga.anandaraman@freshworks.com",  
-        "ad_pass":"SA0580",
+        "mail":"prasannabharati.ram@freshworks.com",  
+        "password":"PR1457",
     },
 ]
-localStorage.setItem("ALL_ADMINS", JSON.stringify(all_adm));
-
-let allAdmin = JSON.parse(localStorage.getItem("ALL_ADMINS"));
+localStorage.setItem("ALL_ADMIN", JSON.stringify(admins));  
+}
+onPageLode();
 function login (even){
     even.preventDefault();
-    let mail = document.getElementById("inputMail").value;
-    let password = document.getElementById("inputPassword").value;
+    let mail = document.getElementById("input_mail").value;
+    let password = document.getElementById("input_password").value;
     console.log(mail,password);
     const adminExist = userCheck(mail,password);
     console.log(adminExist);
@@ -26,19 +27,18 @@ function login (even){
         window.location.href='../../pages/admin.html    ';
     }
     else{
-        let output2 = `<p style="color: red;"> Mail id and password does not match </p>`;
-        console.log(output2);
-        document.getElementById("alert").innerHTML = output2; 
+        let alertLine = `<p style="color: red;"> Mail id and password does not match </p>`;
+        document.getElementById("alert").innerHTML = alertLine; 
     }
 }
     function userCheck(paramail,parapass){
-        console.log(paramail,parapass);
+    console.log(paramail,parapass);
+    let adminlist = JSON.parse(localStorage.getItem("ALL_ADMIN"));
         let adminhere = false;
-        for (let i of allAdmin){
-            const pass = i.ad_pass;
-            const gmail = i.ad_mail;
+        for (let admin of adminlist){
+            console.log(admin.password,admin.mail);
             console.log(pass,gmail);
-            if (paramail==gmail && parapass==pass){
+            if (paramail==admin.mail && parapass==admin.password){
                 adminhere = true;
                 break;
             }
@@ -47,7 +47,7 @@ function login (even){
     }
 
     function show_pass() {
-        let checkBox = document.getElementById("showpass");
+        let checkBox = document.getElementById("show_password");
         if (checkBox.checked) {
           document.getElementById("inputPassword").type = "text";
         }

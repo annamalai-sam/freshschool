@@ -1,5 +1,4 @@
 let allfrm = [];
-
 function pre_data() {
   let application = JSON.parse(localStorage.getItem("STUDENT_FORMLIST"));
   if (application == null) {

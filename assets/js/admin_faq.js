@@ -1,3 +1,4 @@
+function onPageLode(){
 let allQuestions = JSON.parse(localStorage.getItem("USER_QUERY_LIST"));
 let fullQuestions = "";
 console.log(allQuestions);
@@ -19,8 +20,10 @@ for (let i = 0; i < allQuestions.length ; i++) {
   </div>
   </div>`; 
   fullQuestions = fullQuestions + oneQuestion;
+}
 document.getElementById("question_box").innerHTML = fullQuestions;
 }
+onPageLode();
 let allfaq = [];
 function addingFAQ(even){
   even.preventDefault();
@@ -37,7 +40,7 @@ function addingFAQ(even){
 }
 
 
-function answer(even){
+function answer(even){ 
   even.preventDefault();
   let indx = even.target.dataset.index;
   let arrayObject = allQuestions[indx];
