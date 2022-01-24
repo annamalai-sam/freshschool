@@ -1,25 +1,23 @@
 function onPageLode(){
-let allQuestions = JSON.parse(localStorage.getItem("USER_QUERY_LIST"));
-let fullQuestions = "";
-console.log(allQuestions);
-for (let i = 0; i < allQuestions.length ; i++) {
-  const each = allQuestions[i];
-  let oneQuestion = `<div  style="display:flex;">  <div class="contant">
-  <P class="asker" id="name_${i}"> ${each.Name} </P> 
-  <P class="asker" id="mail_${i}"> ${each.mail} </P> 
-  <p class="asked"> ${each.question} </p>
+let questionList = JSON.parse(localStorage.getItem("USER_QUERY_LIST"));
+let questionBoxes = " ";
+for (const [index,questioner] of questionList.entries()) {
+  let questionBox = `<div  style="display:flex;">  <div class="contant">
+  <P class="asker" id="name_${index}"> ${questioner.Name} </P> 
+  <P class="asker" id="mail_${index}"> ${questioner.mail} </P> 
+  <p class="asked"> ${questioner.question} </p>
   </div> 
   <div class="contant">
   <form>
-  <textarea  id="${i}" class="ans" cols="30" rows="10" placeholder="Answer please...." required></textarea>
-  <button class="btn" data-index="${i}" onclick="answer(event);"> Submit </button>
+  <textarea  id="${index}" class="ans" cols="30" rows="10" placeholder="Answer please...." required></textarea>
+  <button class="btn" data-index="${index}" onclick="answer(event);"> Submit </button>
   <br/><br/>
-  <button class="btn" data-index="${i}" onclick="addingFAQ(event);"> Add to FAQ </button>
+  <button class="btn" data-index="${index}" onclick="addingFAQ(event);"> Add to FAQ </button>
   <br/>
   </form>
   </div>
   </div>`; 
-  fullQuestions = fullQuestions + oneQuestion;
+  questionBoxes = questionBox + questionBox;
 }
 document.getElementById("question_box").innerHTML = fullQuestions;
 }
@@ -28,7 +26,8 @@ let allfaq = [];
 function addingFAQ(even){
   even.preventDefault();
   let index_value = even.target.dataset.index;
-  let arrayObj = allQuestions[index_value];
+  let questionList = JSON.parse(localStorage.getItem("USER_QUERY_LIST"));
+  let arrayObj = questionList[index_value];
   let user_ques = arrayObj.question;
   let answer = document.getElementById(index_value).value;
   let faq = {
@@ -43,7 +42,8 @@ function addingFAQ(even){
 function answer(even){ 
   even.preventDefault();
   let indx = even.target.dataset.index;
-  let arrayObject = allQuestions[indx];
+  let questionList = JSON.parse(localStorage.getItem("USER_QUERY_LIST"));
+  let arrayObject = questionList[indx];
   let answer = document.getElementById(indx).value;
   let question = arrayObject.question;
   console.log(question);
