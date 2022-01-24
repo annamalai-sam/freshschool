@@ -1,4 +1,4 @@
-let allQuestions = JSON.parse(localStorage.getItem("allQuestions"));
+let allQuestions = JSON.parse(localStorage.getItem("USER_QUERY_LIST"));
 let fullQuestions = "";
 for (let i = 0; i < allQuestions.length ; i++) {
   const each = allQuestions[i];
@@ -11,9 +11,9 @@ for (let i = 0; i < allQuestions.length ; i++) {
   <form>
   <textarea  id="${i}" class="ans" cols="30" rows="10" placeholder="Answer please...." required></textarea>
   <button class="btn" data-index="${i}" onclick="answer(event);"> Submit </button>
-  <br><br>
+  <br/><br/>
   <button class="btn" data-index="${i}" onclick="addingFAQ(event);"> Add to FAQ </button>
-  <br>
+  <br/>
   </form>
   </div>
   </div>`; 

@@ -1,7 +1,7 @@
 let allQueries = [];
 
 function pre_data() {
-  let questions = JSON.parse(localStorage.getItem("allQuestions"));
+  let questions = JSON.parse(localStorage.getItem("USER_QUERY_LIST"));
   if (questions == null) {
     allQueries = [];
   } else {
@@ -9,8 +9,6 @@ function pre_data() {
   }
 }
 pre_data();
-
-
 
 function addQueries(even){
     even.preventDefault();
@@ -20,7 +18,7 @@ function addQueries(even){
     mail : document.getElementById("mail").value
     }
     allQueries.push(queries);
-    localStorage.setItem("allQuestions", JSON.stringify(allQueries));
+    localStorage.setItem("USER_QUERY_LIST", JSON.stringify(allQueries));
     alert("We will answer you soon and Please check your registered email (spam/promotions folder as well) for updates from us.");
 }
 
