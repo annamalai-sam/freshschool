@@ -18,7 +18,7 @@ function output (mail){
             <tr> 
             <td class="row">${i.First_Name} ${i.Last_name}</td> <td class="row"> ${i.DOB} </td><td class="row">  ${i.Par_name}</td> <td class="row"> ${i.Email}</td> <td class="row"> ${i.status} </td>
             </tr> </table> `;
-            document.getElementById("output").innerHTML = result;
+            document.getElementById("result_table").innerHTML = result;
             exist = false;
             break;
         }
