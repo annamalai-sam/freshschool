@@ -1,5 +1,4 @@
 let allQueries = [];
-
 function pre_data() {
   let questions = JSON.parse(localStorage.getItem("USER_QUERY_LIST"));
   if (questions == null) {
