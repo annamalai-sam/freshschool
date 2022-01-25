@@ -1,9 +1,8 @@
 function onPageLode(){
-let allForms = JSON.parse(localStorage.getItem("STUDENT_FORMLIST"));
-let fullName = "";
-for (let i = 0; i < allForms.length; i++) {
-  let user = allForms[i];
-  let Name = ` <table class="table"> <tr> <th> Name </th>
+let allForms = getData();
+let resultBoxes = "";
+for (let [index,user] of allForms.entries()) {
+let resultBox =`<table class="table"> <tr> <th> Name </th>
                 <td> ${user.First_Name}  ${user.Last_name} </td> </tr>
                 <tr> <th> Date Of Birth </th> <td> ${user.DOB} </td> </tr>
                 <tr> <th> Father's Name </th> <td> ${user.Par_name} </td> </tr>
@@ -11,17 +10,17 @@ for (let i = 0; i < allForms.length; i++) {
                 <form>
                 <tr> <th> <label for="checkBox_${i}"> Result </label> </th> 
                 <td>              
-                <select id="checkBox_${i}" data-index="${i}" onchange="update(event)">
+                <select id="checkBox_${index}" data-index="${index}" onchange="update(event)">
                 <option selected disable> ${user.status} </option>
                 <option>Selected</option>
                 <option>Waiting list</option>
                 <option>Not selected</option>
                 </select>
-                </form> <span id="mail_${i}">  </span>
+                </form> <span id="mail_${index}">  </span>
                 </td> </tr> </table>`;
-  fullName = fullName + Name;
+                resultBoxes = resultBoxes + resultBox;
 }
-document.getElementById("main_table").innerHTML = fullName;
+document.getElementById("main_table").innerHTML = resultBoxes;
 }
 onPageLode();
 function update(even) {
@@ -31,19 +30,20 @@ function update(even) {
   console.log(result);
   let send = `<button  data-addstauts="${result}" data-index="${indx}" onclick="sendMail(event)" class="btn">Send mail</button>`;
   document.getElementById(`mail_${indx}`).innerHTML = send;
-  localStorage.setItem("All_form", JSON.stringify(allForms));
+  localStorage.setItem("STUDENT_FORMLIST", JSON.stringify(allForms));
 }
 function sendMail(even) {
   let index = even.target.dataset.index;
-  let obj = allForms[index];
+  let allForms = getData();
+  let student = allForms[index];
   let Result = even.target.dataset.addstauts;
   console.log(Result);
-  console.log(obj.Email);
-  let contant = `${obj.First_Name+obj.Last_name} you will be ${Result}  for Freshschool in this year`;
+  console.log(student.Email);
+  let contant = `${student.First_Name+student.Last_name} you will be ${Result}  for Freshschool in this year`;
   
   const emailBody = {
-    to_email: obj.Email, // replace it with the receiver's email address
-    to_name: obj.First_Name+obj.Last_name, // replace it with the receiver's name
+    to_email: student.Email, // replace it with the receiver's email address
+    to_name: student.First_Name+student.Last_name, // replace it with the receiver's name
     message: contant,
   };
   console.log(emailBody);
@@ -63,9 +63,16 @@ function sendEmailNotification(body) {
   );
 }
 
-
-
-
+function getData() {
+  let emptyList = " ";
+  let nullList = JSON.parse(localStorage.getItem("STUDENT_FORMLIST"));
+  if (nullList == null) {
+    emptyList = [];
+  } else {
+    emptyList = nullList;
+  }
+  return emptyList;
+}
 
 
 // for (const [i, v] of ['a', 'b', 'c'].entries()) {
