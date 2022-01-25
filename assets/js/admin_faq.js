@@ -17,9 +17,9 @@ for (const [index,questioner] of questionList.entries()) {
   </form>
   </div>
   </div>`; 
-  questionBoxes = questionBox + questionBox;
+  questionBoxes = questionBox + questionBoxes;
 }
-document.getElementById("question_box").innerHTML = fullQuestions;
+document.getElementById("question_box").innerHTML = questionBoxes;
 }
 onPageLode();
 let allfaq = [];
@@ -27,17 +27,16 @@ function addingFAQ(even){
   even.preventDefault();
   let index_value = even.target.dataset.index;
   let questionList = JSON.parse(localStorage.getItem("USER_QUERY_LIST"));
-  let arrayObj = questionList[index_value];
-  let user_ques = arrayObj.question;
+  let questioner = questionList[index_value];
+  let userQuestion = questioner.question;
   let answer = document.getElementById(index_value).value;
   let faq = {
-  "question" : user_ques,
+  "question" : userQuestion,
   "answer" : answer,
 }
   allfaq.push(faq);
   localStorage.setItem("FAQ",JSON.stringify(allfaq));
 }
-
 
 function answer(even){ 
   even.preventDefault();

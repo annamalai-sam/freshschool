@@ -1,44 +1,43 @@
-let allQueries = [];
-function pre_data() {
-  let questions = JSON.parse(localStorage.getItem("USER_QUERY_LIST"));
-  if (questions == null) {
-    allQueries = [];
+function getData() {
+  let emptyList = " ";
+  let nullList = JSON.parse(localStorage.getItem("USER_QUERY_LIST"));
+  if (nullList == null) {
+    emptyList = [];
   } else {
-    allQueries = questions;
+    emptyList = nullList;
   }
+  return emptyList;
 }
-pre_data();
 
 function addQueries(even){
     even.preventDefault();
-    let queries = {
+    let newQuestionList = getData();
+    let newQuery = {
     question : document.getElementById("query").value,
     Name : document.getElementById("name").value,
     mail : document.getElementById("mail").value
     }
-    allQueries.push(queries);
-    localStorage.setItem("USER_QUERY_LIST", JSON.stringify(allQueries));
+    newQuestionList.push(newQuery);
+    localStorage.setItem("USER_QUERY_LIST", JSON.stringify(newQuestionList));
     alert("We will answer you soon and Please check your registered email (spam/promotions folder as well) for updates from us.");
 }
 
-
+function onPageLode(){
   let allfaq = JSON.parse(localStorage.getItem("FAQ"));
-  let output = "";
-  for(let i = 0; i < allfaq.length; i++){
-    let one = allfaq[i];
-    let ques = one.question;
-    let anes = one.answer;
-    console.log(ques);
-    console.log(anes);
-    let out = ` <div class="contant-item">
-                 <a class="contant-link" href="#question${i}"> ${ques} </a>
-                 <div class="ans" id="question${i}">
-                 <p> ${anes} </p>
-                 </div>
-                 </div>`;
-    output = output + out;
+  let faqlist = "";
+  for(let [index,setOfFaq] of  allfaq.entries()){
+    let faq = ` <div class="contant-item">
+                <a class="contant-link" href="#question${index}"> ${setOfFaq.question} </a>
+                <div class="ans" id="question${index}">
+                <p> ${setOfFaq.answer} </p>
+                </div>
+                </div>`;
+                faqlist = faqlist + faq;
   }
-document.getElementById("FAQ").innerHTML = output;
+document.getElementById("FAQ").innerHTML = faqlist;
+}
+
+onPageLode();
 
 
 
