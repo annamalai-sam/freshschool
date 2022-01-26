@@ -11,7 +11,7 @@ function addQuery(even) {
   let questionList = getData();
   let query = {
     question: document.getElementById("query").value,
-    Name: document.getElementById("name").value,
+    name: document.getElementById("name").value,
     mail: document.getElementById("mail").value
   }
   questionList.push(query);

@@ -1,9 +1,9 @@
-function onPageLode(){
-let questionList = JSON.parse(localStorage.getItem("USER_QUERY_LIST"));
-let questionBoxes = " ";
+function onPageLoad(){
+let questionList = getUserQueriesData();
+let htmlQuestionBox = " ";
 for (const [index,questioner] of questionList.entries()) {
-  let questionBox = `<div  style="display:flex;">  <div class="contant">
-  <P class="asker" id="name_${index}"> ${questioner.Name} </P> 
+  htmlQuestionBox += `<div  style="display:flex;">  <div class="contant">
+  <P class="asker" id="name_${index}"> ${questioner.name} </P> 
   <P class="asker" id="mail_${index}"> ${questioner.mail} </P> 
   <p class="asked"> ${questioner.question} </p>
   </div> 
@@ -17,34 +17,33 @@ for (const [index,questioner] of questionList.entries()) {
   </form>
   </div>
   </div>`; 
-  questionBoxes = questionBox + questionBoxes;
 }
-document.getElementById("question_box").innerHTML = questionBoxes;
+document.getElementById("question_box").innerHTML = htmlQuestionBox;
 }
-onPageLode();
-let allfaq = [];
+onPageLoad();
 function addingFAQ(even){
   even.preventDefault();
   let index_value = even.target.dataset.index;
-  let questionList = JSON.parse(localStorage.getItem("USER_QUERY_LIST"));
+  let questionList = getUserQueriesData();
   let questioner = questionList[index_value];
   let userQuestion = questioner.question;
   let answer = document.getElementById(index_value).value;
-  let faq = {
+  let newFaq = {
   "question" : userQuestion,
   "answer" : answer,
 }
-  allfaq.push(faq);
-  localStorage.setItem("FAQ",JSON.stringify(allfaq));
+  let faqList = getFaqData();
+  faqList.push(newFaq);
+  localStorage.setItem("FAQ",JSON.stringify(faqList));
 }
 
 function answer(even){ 
   even.preventDefault();
   let index = even.target.dataset.index;
-  let questionList = JSON.parse(localStorage.getItem("USER_QUERY_LIST"));
-  let arrayObject = questionList[index];
+  let questionList = getUserQueriesData();
+  let questioner = questionList[index];
   let answer = document.getElementById(index).value;
-  let question = arrayObject.question;  
+  let question = questioner.question;  
   console.log(question);
   console.log(answer);
   let contant = `
@@ -52,8 +51,8 @@ function answer(even){
   ${answer}
   `;
   const emailBody = {
-  to_email: arrayObject.mail, // replace it with the receiver's email address
-  to_name: arrayObject.Name, // replace it with the receiver's name
+  to_email: questioner.mail, // replace it with the receiver's email address
+  to_name: questioner.name, // replace it with the receiver's name
   message: contant,
 };
 console.log(emailBody);
@@ -72,4 +71,21 @@ sendEmailNotification(emailBody);
       }
     );
     console.log(body);
+  }
+
+  function getUserQueriesData() {  //get student list from local storage
+    let queryList = JSON.parse(localStorage.getItem("USER_QUERY_LIST"));
+    if (queryList == null) {
+      queryList = [];
+    }
+    return queryList;
+  }
+
+
+  function getFaqData() {  //get student list from local storage
+    let faqList = JSON.parse(localStorage.getItem("FAQ"));
+    if (faqList == null) {
+      faqList = [];
+    }
+    return faqList;
   }
