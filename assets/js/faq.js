@@ -20,21 +20,26 @@ function addQuery(even) {
 }
 
 function onPageLode() {
-  let allFaq = JSON.parse(localStorage.getItem("FAQ"));
-  let faqlist = "";
-  for (let [index, setOfFaq] of allFaq.entries()) {
-    let faq = ` <div class="contant-item">
+  let faqList = getFaqData();
+  let faq = " ";
+  for (let [index, setOfFaq] of faqList.entries()) {
+  faq += ` <div class="contant-item">
                 <a class="contant-link" href="#question${index}"> ${setOfFaq.question} </a>
                 <div class="ans" id="question${index}">
                 <p> ${setOfFaq.answer} </p>
                 </div>
                 </div>`;
-    faqlist = faqlist + faq;
   }
-  document.getElementById("FAQ").innerHTML = faqlist;
+  document.getElementById("FAQ").innerHTML = faq;
 }
 
 onPageLode();
 
 
-
+function getFaqData() {  //get student list from local storage
+  let faqList = JSON.parse(localStorage.getItem("FAQ"));
+  if (faqList == null) {
+    faqList = [];
+  }
+  return faqList;
+}
