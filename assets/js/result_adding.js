@@ -1,14 +1,14 @@
-function onPageLode(){
+function onPageLoad(){
 let allForms = getData();
-let resultBoxes = "";
+let htmlResultBox = "";
 for (let [index,user] of allForms.entries()) {
-resultBoxes =+ `<table class="table"> <tr> <th> Name </th>
-                <td> ${user.First_Name}  ${user.Last_name} </td> </tr>
-                <tr> <th> Date Of Birth </th> <td> ${user.DOB} </td> </tr>
-                <tr> <th> Father's Name </th> <td> ${user.Par_name} </td> </tr>
-                <tr> <th> Email </th> <td> ${user.Email} </td> </tr>
+htmlResultBox +=`<table class="table"> <tr> <th> Name </th>
+                <td> ${user.firstName}  ${user.lastName} </td> </tr>
+                <tr> <th> Date Of Birth </th> <td> ${user.birthDate} </td> </tr>
+                <tr> <th> Father's Name </th> <td> ${user.parentName} </td> </tr>
+                <tr> <th> Email </th> <td> ${user.mail} </td> </tr>
                 <form>
-                <tr> <th> <label for="checkBox_${i}"> Result </label> </th> 
+                <tr> <th> <label for="checkBox_${index}"> Result </label> </th> 
                 <td>              
                 <select id="checkBox_${index}" data-index="${index}" onchange="update(event)">
                 <option selected disable> ${user.status} </option>
@@ -19,9 +19,10 @@ resultBoxes =+ `<table class="table"> <tr> <th> Name </th>
                 </form> <span id="mail_${index}">  </span>
                 </td> </tr> </table>`;
 }
-document.getElementById("main_table").innerHTML = resultBoxes;
+document.getElementById("main_table").innerHTML = htmlResultBox;
+console.log(htmlResultBox);
 }
-onPageLode();
+onPageLoad();
 function update(even) {
   let result = even.target.value;
   let index = even.target.dataset.index;
@@ -63,14 +64,11 @@ function sendEmailNotification(body) {
 }
 
 function getData() {
-  let emptyList = " ";
-  let nullList = JSON.parse(localStorage.getItem("STUDENT_FORMLIST"));
-  if (nullList == null) {
-    emptyList = [];
-  } else {
-    emptyList = nullList;
+  let studentList = JSON.parse(localStorage.getItem("STUDENT_FORMLIST"));
+  if (studentList == null) {
+    studentList = [];
   }
-  return emptyList;
+  return studentList;
 }
 
 
