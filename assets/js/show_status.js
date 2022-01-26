@@ -8,14 +8,14 @@ function checkResult(even){
 }
 function showingResult (mail){
     let exist = true;
-    let studentlist = JSON.parse(localStorage.getItem("STUDENT_FORMLIST"));
+    let studentlist = getData();
     for (let student of studentlist) {
-        if (mail == student.Email){
+        if (mail == student.mail){
             let result_table = ` <table class="result"> <tr>
             <th class="row"> Name </th> <th class="row"> Date Of Birth </th> <th class="row"> Father's Name </th> <th class="row"> Email </th> <th class="row"> Result </th>
             </tr>
             <tr> 
-            <td class="row">${student.First_Name} ${student.Last_name}</td> <td class="row"> ${student.DOB} </td><td class="row">  ${student.Par_name}</td> <td class="row"> ${student.Email}</td> <td class="row"> ${student.status} </td>
+            <td class="row">${student.firstName} ${student.lastName}</td> <td class="row"> ${student.birthDate} </td><td class="row">  ${student.parentName}</td> <td class="row"> ${student.mail}</td> <td class="row"> ${student.status} </td>
             </tr> </table> `;
             document.getElementById("result_table").innerHTML = result_table;
             exist = false;
@@ -25,4 +25,10 @@ function showingResult (mail){
     return exist;
 }
 
-
+function getData() {  //get student list from local storage
+    let studentList = JSON.parse(localStorage.getItem("STUDENT_FORMLIST"));
+    if (studentList == null) {
+        studentList = [];
+    }
+    return studentList;
+    }
