@@ -1,61 +1,47 @@
-let allfrm = [];
-function pre_data() {
-  let application = JSON.parse(localStorage.getItem("STUDENT_FORMLIST"));
-  if (application == null) {
-    allfrm = [];
-  } else {
-    allfrm = application;
+function getData() {  //get student list from local storage
+  let studentList = JSON.parse(localStorage.getItem("STUDENT_FORMLIST"));
+  if (studentList == null) {
+    studentList = [];
   }
+  return studentList;
 }
-pre_data();
 
-function loginAlert(even) {
+
+function loginAlert(even) {  //get mail from user
   even.preventDefault();
-  let firstname = document.getElementById("firstname").value;
-  let lastname = document.getElementById("lastname").value;
   let email = document.getElementById("email").value;
-  let stu_num = document.getElementById("stu_num").value;
-  let dob = document.getElementById("dob").value;
-  let documnt = document.getElementById("document").value;
-  let par_name = document.getElementById("par_name").value;
-  let par_email = document.getElementById("par_email").value;
-  let par_num = document.getElementById("par_num").value;
-  let address = document.getElementById("address").value; 
+  const isEmailAlreadyExist = emailValid(email); // check user mail is already exist or not 
+  // console.log(isEmailAlreadyExist);
 
-  const isEmailAlreadyExist = emailValid(email);
-
-  console.log(isEmailAlreadyExist);
-
-  if (isEmailAlreadyExist) {
+  if (isEmailAlreadyExist) {            // if is exist alert 
     alert("Email already exist");
-  } else {
-        let form = {
-     "First_Name": firstname,
-      "Last_name": lastname,
-      "Email": email,
-      "Stu_num": stu_num,
-      "DOB": dob,
-      "Documnt": documnt,
-      "Par_name": par_name,
-      "Par_email": par_email,
-      "Par_num": par_num,
-      "address": address,
+  } else {                           // else  get value from user and store in local storage
+        let newForm = {
+      "firstName": document.getElementById("firstname").value,
+      "lastName": document.getElementById("lastname").value,
+      "mail": email,
+      "contactNumber": document.getElementById("stu_num").value,
+      "birthDate": document.getElementById("dob").value,
+      "Document": document.getElementById("document").value,
+      "parentName": document.getElementById("par_name").value,
+      "parentMail": document.getElementById("par_email").value,
+      "parentContantNumber": document.getElementById("par_num").value,
+      "address": document.getElementById("address").value,
       "status":"Enrolled",
     };
-    console.log(form);
-    allfrm.push(form);
-    console.log(allfrm);
-    localStorage.setItem("STUDENT_FORMLIST", JSON.stringify(allfrm));
+    // console.log(newForm);
+    let formList = getData();
+    formList.push(newForm);
+    // console.log(formList);
+    localStorage.setItem("STUDENT_FORMLIST", JSON.stringify(formList)); 
     alert("Successfully Registored and Please check your registered email (spam/promotions folder as well) for updates from us.");
   }
 }
-function emailValid(current_email) {
-  
+function emailValid(current_email) {    // check mail from user
   let isUsed = false;
-  
-  for (let i of allfrm) {
-    const gmail = i.Email;
-    if (current_email == gmail) {
+  let formList = getData();
+  for (let form of formList) {
+    if (current_email == form.mail) {
       isUsed = true;
       break;
     }

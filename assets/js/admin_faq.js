@@ -40,11 +40,11 @@ function addingFAQ(even){
 
 function answer(even){ 
   even.preventDefault();
-  let indx = even.target.dataset.index;
+  let index = even.target.dataset.index;
   let questionList = JSON.parse(localStorage.getItem("USER_QUERY_LIST"));
-  let arrayObject = questionList[indx];
-  let answer = document.getElementById(indx).value;
-  let question = arrayObject.question;
+  let arrayObject = questionList[index];
+  let answer = document.getElementById(index).value;
+  let question = arrayObject.question;  
   console.log(question);
   console.log(answer);
   let contant = `
