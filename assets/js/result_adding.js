@@ -24,13 +24,17 @@ console.log(htmlResultBox);
 }
 onPageLoad();
 function update(even) {       // update the result to the student 
+  let allForms = getData();
   let result = even.target.value;
   let index = even.target.dataset.index;
   console.log(index);
   console.log(result);
+  let student = allForms[index];
+  student.status = result;
+  console.log(student);
+  console.log(student.status = result);
   let send = `<button  data-addstauts="${result}" data-index="${index}" onclick="sendMail(event)" class="btn">Send mail</button>`;
   document.getElementById(`mail_${index}`).innerHTML = send;
-  let allForms = getData();
   localStorage.setItem("STUDENT_FORMLIST", JSON.stringify(allForms));
 }
 function sendMail(even) {           // sending result result mail to the students 
@@ -39,12 +43,12 @@ function sendMail(even) {           // sending result result mail to the student
   let student = allForms[index];
   let result = even.target.dataset.addstauts;
   console.log(result);
-  console.log(student.Email);
-  let contant = `${student.First_Name+student.Last_name} you will be ${result}  for Freshschool in this year`;
+  console.log(student.mail);
+  let contant = `${student.firstName+" "+student.lastName} you will be ${result}  for Freshschool in this year`;
   
   const emailBody = {
-    to_email: student.Email, // replace it with the receiver's email address
-    to_name: student.First_Name+student.Last_name, // replace it with the receiver's name
+    to_email: student.mail, // replace it with the receiver's email address
+    to_name: student.firstName+student.lastName, // replace it with the receiver's name
     message: contant,
   };
   console.log(emailBody);
