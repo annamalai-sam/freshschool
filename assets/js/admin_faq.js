@@ -1,5 +1,5 @@
-function onPageLoad(){
-let questionList = getUserQueriesData();
+function onPageLoad(){             // get all querylist from local storage and display it in on page load 
+let questionList = getUserQueriesData();  // get all queries from local storage 
 let htmlQuestionBox = " ";
 for (const [index,questioner] of questionList.entries()) {
   htmlQuestionBox += `<div  style="display:flex;">  <div class="contant">
@@ -21,7 +21,7 @@ for (const [index,questioner] of questionList.entries()) {
 document.getElementById("question_box").innerHTML = htmlQuestionBox;
 }
 onPageLoad();
-function addingFAQ(even){
+function addingFAQ(even){        // Adding FAQ from querylist and show in FAQ page 
   even.preventDefault();
   let index_value = even.target.dataset.index;
   let questionList = getUserQueriesData();
@@ -32,13 +32,13 @@ function addingFAQ(even){
   "question" : userQuestion,
   "answer" : answer,
 }
-  let faqList = getFaqData();
+  let faqList = getFaqData();    // get all faqlist from local storage 
   faqList.push(newFaq);
   localStorage.setItem("FAQ",JSON.stringify(faqList));
 }
 
-function answer(even){ 
-  even.preventDefault();
+function answer(even){    // Answering to user querylist
+  even.preventDefault(); 
   let index = even.target.dataset.index;
   let questionList = getUserQueriesData();
   let questioner = questionList[index];
@@ -59,7 +59,7 @@ console.log(emailBody);
 sendEmailNotification(emailBody);
 }
 
-  function sendEmailNotification(body) {
+  function sendEmailNotification(body) { // sending answer mail to users 
     emailjs.send("service_1fhzihk", "template_lu9b6ct", body).then(
       function (response) {
         console.log("SUCCESS!", response.status, response.text);
@@ -73,7 +73,7 @@ sendEmailNotification(emailBody);
     console.log(body);
   }
 
-  function getUserQueriesData() {  //get student list from local storage
+  function getUserQueriesData() {  //get querylist from local storage
     let queryList = JSON.parse(localStorage.getItem("USER_QUERY_LIST"));
     if (queryList == null) {
       queryList = [];
@@ -82,7 +82,7 @@ sendEmailNotification(emailBody);
   }
 
 
-  function getFaqData() {  //get student list from local storage
+  function getFaqData() {  //get faqlist list from local storage
     let faqList = JSON.parse(localStorage.getItem("FAQ"));
     if (faqList == null) {
       faqList = [];
