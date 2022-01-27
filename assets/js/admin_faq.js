@@ -82,7 +82,7 @@ sendEmailNotification(emailBody);
   }
 
 
-  function getFaqData() {  //get faqlist list from local storage
+  function getFaqData() {  //get  list from local storage
     let faqList = JSON.parse(localStorage.getItem("FAQ"));
     if (faqList == null) {
       faqList = [];

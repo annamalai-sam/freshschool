@@ -16,7 +16,7 @@ function onPageLode() {
   localStorage.setItem("ALL_ADMIN", JSON.stringify(admins));
 }
 onPageLode();
-function login(even) {
+function login(even) {  // get mail and password from the user
   even.preventDefault();
   let mail = document.getElementById("input_mail").value;
   let password = document.getElementById("input_password").value;
@@ -30,7 +30,7 @@ function login(even) {
     document.getElementById("alert").innerHTML = alertLine;
   }
 }
-function userCheck(email, password) {
+function userCheck(email, password) {    // check the get mail and password correct or not
   console.log(email, password);
   let adminlist = JSON.parse(localStorage.getItem("ALL_ADMIN"));
   let adminhere = false;
@@ -44,7 +44,7 @@ function userCheck(email, password) {
   return adminhere;
 }
 
-function show_pass() {
+function show_pass() {                         // showing password in html page
   let checkBox = document.getElementById("show_password");
   if (checkBox.checked) {
     document.getElementById("inputPassword").type = "text";

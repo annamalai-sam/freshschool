@@ -1,4 +1,4 @@
-function getData() {
+function getData() {    // get all querylist from local storage 
   let querylist = JSON.parse(localStorage.getItem("USER_QUERY_LIST"));
   if (querylist == null) {
     querylist = [];
@@ -6,7 +6,7 @@ function getData() {
   return querylist;
 }
 
-function addQuery(even) {
+function addQuery(even) {        // add new queries from user and stored in local storage
   even.preventDefault();
   let questionList = getData();
   let query = {
@@ -19,7 +19,7 @@ function addQuery(even) {
   alert("We will answer you soon and Please check your registered email (spam/promotions folder as well) for updates from us.");
 }
 
-function onPageLode() {
+function onPageLode() { //get faqlist from local storage and show in a html page
   let faqList = getFaqData();
   let faq = " ";
   for (let [index, setOfFaq] of faqList.entries()) {
@@ -36,7 +36,7 @@ function onPageLode() {
 onPageLode();
 
 
-function getFaqData() {  //get student list from local storage
+function getFaqData() {  //get faqlist from local storage
   let faqList = JSON.parse(localStorage.getItem("FAQ"));
   if (faqList == null) {
     faqList = [];

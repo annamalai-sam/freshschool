@@ -1,4 +1,4 @@
-function onPageLoad(){
+function onPageLoad(){   // get all student list from local storage  and show in a html page
 let allForms = getData();
 let htmlResultBox = "";
 for (let [index,user] of allForms.entries()) {
@@ -23,16 +23,17 @@ document.getElementById("main_table").innerHTML = htmlResultBox;
 console.log(htmlResultBox);
 }
 onPageLoad();
-function update(even) {
+function update(even) {       // update the result to the student 
   let result = even.target.value;
   let index = even.target.dataset.index;
   console.log(index);
   console.log(result);
   let send = `<button  data-addstauts="${result}" data-index="${index}" onclick="sendMail(event)" class="btn">Send mail</button>`;
   document.getElementById(`mail_${index}`).innerHTML = send;
+  let allForms = getData();
   localStorage.setItem("STUDENT_FORMLIST", JSON.stringify(allForms));
 }
-function sendMail(even) {
+function sendMail(even) {           // sending result result mail to the students 
   let index = even.target.dataset.index;
   let allForms = getData();
   let student = allForms[index];
@@ -50,7 +51,7 @@ function sendMail(even) {
   sendEmailNotification(emailBody);
 }
 
-function sendEmailNotification(body) {
+function sendEmailNotification(body) {    // sending result result mail to the students
   emailjs.send("service_1fhzihk", "template_lu9b6ct", body).then(
     function (response) {
       console.log("SUCCESS!", response.status, response.text);
@@ -63,7 +64,7 @@ function sendEmailNotification(body) {
   );
 }
 
-function getData() {
+function getData() {    // get all student list from local storage 
   let studentList = JSON.parse(localStorage.getItem("STUDENT_FORMLIST"));
   if (studentList == null) {
     studentList = [];
