@@ -20,9 +20,9 @@ function login(even) {  // get mail and password from the user
   even.preventDefault();
   let mail = document.getElementById("input_mail").value;
   let password = document.getElementById("input_password").value;
-  console.log(mail, password);
+  // console.log(mail, password);
   const adminExist = userCheck(mail, password);
-  console.log(adminExist);
+  // console.log(adminExist);
   if (adminExist) {
     window.location.href = "../../pages/admin.html";
   } else {
@@ -31,11 +31,11 @@ function login(even) {  // get mail and password from the user
   }
 }
 function userCheck(email, password) {    // check the get mail and password correct or not
-  console.log(email, password);
+  // console.log(email, password);
   let adminlist = JSON.parse(localStorage.getItem("ADMIN_LIST"));
   let adminhere = false;
   for (let admin of adminlist) {
-    console.log(admin.password, admin.mail);
+    // console.log(admin.password, admin.mail);
     if (email == admin.mail && password == admin.password) {
       adminhere = true;
       break;

@@ -20,19 +20,18 @@ htmlResultBox +=`<table class="table"> <tr> <th> Name </th>
                 </td> </tr> </table>`;
 }
 document.getElementById("main_table").innerHTML = htmlResultBox;
-console.log(htmlResultBox);
+// console.log(htmlResultBox);
 }
 onPageLoad();
 function update(even) {       // update the result to the student 
   let allForms = getData();
   let result = even.target.value;
   let index = even.target.dataset.index;
-  console.log(index);
-  console.log(result);
-  let student = allForms[index];
-  student.status = result;
-  console.log(student);
-  console.log(student.status = result);
+  // console.log(index);
+  // console.log(result);
+  allForms[index].status = result;
+  // console.log(student);
+  // console.log(student.status = result);
   let send = `<button  data-addstauts="${result}" data-index="${index}" onclick="sendMail(event)" class="btn">Send mail</button>`;
   document.getElementById(`mail_${index}`).innerHTML = send;
   localStorage.setItem("STUDENT_FORMLIST", JSON.stringify(allForms));
@@ -42,8 +41,8 @@ function sendMail(even) {           // sending result result mail to the student
   let allForms = getData();
   let student = allForms[index];
   let result = even.target.dataset.addstauts;
-  console.log(result);
-  console.log(student.mail);
+  // console.log(result);
+  // console.log(student.mail);
   let contant = `${student.firstName+" "+student.lastName} you will be ${result}  for Freshschool in this year`;
   
   const emailBody = {
@@ -51,7 +50,7 @@ function sendMail(even) {           // sending result result mail to the student
     to_name: student.firstName+student.lastName, // replace it with the receiver's name
     message: contant,
   };
-  console.log(emailBody);
+  // console.log(emailBody);
   sendEmailNotification(emailBody);
 }
 
@@ -66,6 +65,7 @@ function sendEmailNotification(body) {    // sending result result mail to the s
       // TODO: to do if sending Email was UNSUCCESSFUL  //
     }
   );
+  console.log(body);
 }
 
 function getData() {    // get all student list from local storage 
