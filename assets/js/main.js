@@ -16,7 +16,7 @@ function loginAlert(even) {  //get mail from user
   if (isEmailAlreadyExist) {            // if is exist alert 
     alert("Email already exist");
   } else {                           // else  get value from user and store in local storage
-        let newForm = {
+    let newForm = {
       "firstName": document.getElementById("firstname").value,
       "lastName": document.getElementById("lastname").value,
       "mail": email,
@@ -27,13 +27,13 @@ function loginAlert(even) {  //get mail from user
       "parentMail": document.getElementById("parent_email").value,
       "parentContantNumber": document.getElementById("parent_contact_number").value,
       "address": document.getElementById("address").value,
-      "status":"Enrolled",
+      "status": "Enrolled",
     };
     // console.log(newForm);
     let formList = getData();
     formList.push(newForm);
     // console.log(formList);
-    localStorage.setItem("STUDENT_FORMLIST", JSON.stringify(formList)); 
+    localStorage.setItem("STUDENT_FORMLIST", JSON.stringify(formList));
     alert("Successfully Registored and Please check your registered email (spam/promotions folder as well) for updates from us.");
   }
 }
@@ -48,3 +48,6 @@ function emailValid(current_email) {    // check mail from user
   }
   return isUsed;
 }
+
+
+

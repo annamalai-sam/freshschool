@@ -1,24 +1,22 @@
-function checkResult(even){         // get mail from user
+function checkResult(even) {         // get mail from user
     even.preventDefault();
     let mail = document.getElementById("res_mail").value;
-    let mailExist = showingResult(mail); 
-    if(mailExist){
+    let mailExist = showingResult(mail);
+    if (mailExist) {
         alert("Mail does not Exist");
     }
 }
-function showingResult (mail){  // check user 
+function showingResult(mail) {  // check user 
     let exist = true;
     let studentlist = getData();
     for (let student of studentlist) {
-        if (mail == student.mail){      // if it exist show result   else alert 
+        if (mail == student.mail) {      // if it exist show result   else alert 
             let result_table = ` <table class="result"> <tr>
-            <th class="row"> Name </th> <th class="row"> Date Of Birth </th> <th class="row"> Father's Name </th> <th class="row"> Email </th> <th class="row"> Result </th>
-            </tr>
-            <tr> 
-            <td class="row">${student.firstName} ${student.lastName}</td> <td class="row"> ${student.birthDate} </td><td class="row">  ${student.parentName}</td> <td class="row"> ${student.mail}</td> <td class="row"> ${student.status} </td>
-            </tr> </table> `;
+            <th class="row"> Name </th> <th class="row"> Date Of Birth </th> <th class="row"> Father's Name </th> <th class="row"> Email </th> <th class="row"> Result </th> </tr>
+            <tr><td class="row">${student.firstName} ${student.lastName}</td> <td class="row"> ${student.birthDate} </td><td class="row">  ${student.parentName}</td> <td class="row"> ${student.mail}</td> <td class="row"> ${student.status} </td></tr>
+            </table> `;
             document.getElementById("result_table").innerHTML = result_table;
-            exist = false;    
+            exist = false;
             break;
         }
     }
@@ -31,4 +29,4 @@ function getData() {  //get student list from local storage
         studentList = [];
     }
     return studentList;
-    }
+}

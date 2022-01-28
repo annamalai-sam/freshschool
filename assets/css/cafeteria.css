@@ -1,22 +1,27 @@
-*{
+* {
     font-family: 'Open Sans', sans-serif;
 }
-body{
+
+body {
     background-color: rgb(238, 243, 243);
 }
-.fwlogo{
+
+.fwlogo {
     position: absolute;
 }
-.navBar{
+
+.navBar {
     margin-left: 15%;
 }
-ul{
+
+ul {
     list-style: none;
     margin: 0;
     padding: 0;
 
 }
-ul li{
+
+ul li {
     float: left;
     text-align: center;
     line-height: 130%;
@@ -25,23 +30,28 @@ ul li{
     background-color: rgb(238, 243, 243);
     font-size: 25px;
 }
+
 ul li a {
     text-decoration: none;
     color: black;
     text-shadow: black 0px 0px 1px;
     display: block;
-  }
-ul li a:hover{
+}
+
+ul li a:hover {
     color: red;
     width: auto;
 }
+
 ul li ul li {
     display: none;
 }
-ul li:hover ul li{
+
+ul li:hover ul li {
     display: block;
 }
-.main{
+
+.main {
     background-image: url("../images/fd3.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -49,31 +59,36 @@ ul li:hover ul li{
     height: 100%;
     margin-top: 2%;
 }
-.head{
+
+.head {
     text-align: center;
-    color:white;
-    text-shadow:black 0px 0px 10px;
-    font-weight:900;
+    color: white;
+    text-shadow: black 0px 0px 10px;
+    font-weight: 900;
     font-size: 260%;
 }
-.slogan{
+
+.slogan {
     text-align: center;
-    color:rgb(44, 44, 44);
-    text-shadow:white 0px 0px 10px;
+    color: rgb(44, 44, 44);
+    text-shadow: white 0px 0px 10px;
 }
-.pics{
+
+.pics {
     margin-top: 5%;
     margin-left: 8%;
     border-radius: 10px;
     width: 40%;
     height: 50%;
 }
-.why{
+
+.why {
     color: #669db3ff;
     text-align: center;
     font-size: 220%;
 }
-.title{
+
+.title {
     margin-left: 15%;
     font-size: 660%;
     color: #669db3ff;

@@ -1,22 +1,27 @@
-*{
+* {
     font-family: 'Open Sans', sans-serif;
 }
-body{
+
+body {
     background-color: rgb(238, 243, 243);
 }
-.fwlogo{
+
+.fwlogo {
     position: absolute;
 }
-.navBar{
+
+.navBar {
     margin-left: 15%;
     position: fixed;
 }
-ul{
+
+ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-ul li{
+
+ul li {
     float: left;
     text-align: center;
     line-height: 130%;
@@ -25,60 +30,72 @@ ul li{
     background-color: rgb(238, 243, 243);
     font-size: 25px;
 }
+
 ul li a {
     text-decoration: none;
     transition: 2s;
     color: black;
     text-shadow: black 0px 0px 1px;
     display: block;
-  }
-ul li a:hover{
+}
+
+ul li a:hover {
     color: red;
     width: auto;
 }
+
 ul li ul li {
     display: none;
 }
-ul li:hover ul li{
+
+ul li:hover ul li {
     display: block;
 }
-.list{
-    font-size:  150%;
+
+.list {
+    font-size: 150%;
     margin-left: 15%;
 }
-.ques{
-    font-size:  150%;
+
+.ques {
+    font-size: 150%;
     font-weight: bold;
     margin-left: 3%;
 }
-.ans{
-    font-size:  150%;
+
+.ans {
+    font-size: 150%;
     margin-left: 4%;
 }
+
 .img {
     border-radius: 20px 20px;
-    width : 44%;
-    height : 450px;
-    margin-left : 2%;
+    width: 44%;
+    height: 450px;
+    margin-left: 2%;
     margin-bottom: 5%;
 }
-h1{
+
+h1 {
     text-align: center;
 }
-.title{
+
+.title {
     margin-left: 15%;
     font-size: 660%;
     color: #669db3ff;
 }
-.video{
-    height : 80vh;
-    width : 75%;
+
+.video {
+    height: 80vh;
+    width: 75%;
     display: flex;
     margin: auto;
     border-radius: 5px;
-    border:none;
+    border: none;
 }
-.main{
+
+.main {
     width: 80%;
     margin: auto;
     display: flex;

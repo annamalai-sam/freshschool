@@ -23,7 +23,7 @@ function onPageLode() { //get faqlist from local storage and show in a html page
   let faqList = getFaqData();
   let faq = " ";
   for (let [index, setOfFaq] of faqList.entries()) {
-  faq += ` <div class="contant-item">
+    faq += ` <div class="contant-item">
                 <a class="contant-link" href="#question${index}"> ${setOfFaq.question} </a>
                 <div class="ans" id="question${index}">
                 <p> ${setOfFaq.answer} </p>

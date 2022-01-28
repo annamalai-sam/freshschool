@@ -1,8 +1,8 @@
-function onPageLoad(){   // get all student list from local storage  and show in a html page
-let allForms = getData();
-let htmlResultBox = "";
-for (let [index,user] of allForms.entries()) {
-htmlResultBox +=`<table class="table"> <tr> <th> Name </th>
+function onPageLoad() {   // get all student list from local storage  and show in a html page
+  let allForms = getData();
+  let htmlResultBox = "";
+  for (let [index, user] of allForms.entries()) {
+    htmlResultBox += `<table class="table"> <tr> <th> Name </th>
                 <td> ${user.firstName}  ${user.lastName} </td> </tr>
                 <tr> <th> Date Of Birth </th> <td> ${user.birthDate} </td> </tr>
                 <tr> <th> Father's Name </th> <td> ${user.parentName} </td> </tr>
@@ -18,9 +18,9 @@ htmlResultBox +=`<table class="table"> <tr> <th> Name </th>
                 </select>
                 </form> <span id="mail_${index}">  </span>
                 </td> </tr> </table>`;
-}
-document.getElementById("main_table").innerHTML = htmlResultBox;
-// console.log(htmlResultBox);
+  }
+  document.getElementById("main_table").innerHTML = htmlResultBox;
+  // console.log(htmlResultBox);
 }
 onPageLoad();
 function update(even) {       // update the result to the student 
@@ -43,11 +43,11 @@ function sendMail(even) {           // sending result result mail to the student
   let result = even.target.dataset.addstauts;
   // console.log(result);
   // console.log(student.mail);
-  let contant = `${student.firstName+" "+student.lastName} you will be ${result}  for Freshschool in this year`;
-  
+  let contant = `${student.firstName + " " + student.lastName} you will be ${result}  for Freshschool in this year`;
+
   const emailBody = {
     to_email: student.mail, // replace it with the receiver's email address
-    to_name: student.firstName+student.lastName, // replace it with the receiver's name
+    to_name: student.firstName + student.lastName, // replace it with the receiver's name
     message: contant,
   };
   // console.log(emailBody);
