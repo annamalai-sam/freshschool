@@ -24,7 +24,7 @@ function login(even) {  // get mail and password from the user
   const adminExist = userCheck(mail, password);
   // console.log(adminExist);
   if (adminExist) {
-    window.location.href = "./../../pages/admin.html";
+    window.location.href = "./../pages/admin.html";
   } else {
     let alertLine = `<p style="color: red;"> Mail id and password does not match </p>`;
     document.getElementById("alert").innerHTML = alertLine;
